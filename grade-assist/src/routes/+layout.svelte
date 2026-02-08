@@ -7,7 +7,7 @@
         <header class="mb-8 flex items-center justify-between">
             <div>
                  <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Grading Assistant</h1>
-                 <p class="text-gray-500 mt-1">Benevolent Mentor Persona</p>
+                 <p class="text-gray-500 mt-1">Linguistics and Film</p>
             </div>
             <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-200">
                 LIN2002
