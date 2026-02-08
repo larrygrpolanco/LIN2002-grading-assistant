@@ -5,6 +5,7 @@
 	import { fade, slide } from 'svelte/transition';
 
 	import Modal from '$lib/components/Modal.svelte';
+	import Toast from '$lib/components/Toast.svelte';
 	import { onMount } from 'svelte';
 
 	let selectedModuleId = $state(1); // Default to 1
@@ -17,6 +18,9 @@
 	let isModalOpen = $state(false);
 	let modalContent = $state('');
 	let modalTitle = $state('');
+
+	// Toast State
+	let showToast = $state(false);
 
 	// Derived values
 	let selectedModule = $derived(modules.find((m) => m.id === selectedModuleId));
@@ -203,7 +207,12 @@
 
 				<div class="mt-6 flex gap-3">
 					<button
-						onclick={() => navigator.clipboard.writeText(result?.feedback || '')}
+						onclick={async () => {
+							if (result?.feedback) {
+								await navigator.clipboard.writeText(result.feedback);
+								showToast = true;
+							}
+						}}
 						class="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
 					>
 						Copy Feedback
@@ -240,3 +249,10 @@
 		{/if}
 	</div>
 </div>
+
+{#if showToast}
+	<Toast 
+		message="Feedback copied to clipboard!" 
+		onClose={() => showToast = false} 
+	/>
+{/if}
