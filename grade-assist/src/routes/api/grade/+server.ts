@@ -190,7 +190,7 @@ IMPORTANT: Follow the voice, tone, and grading style shown in the previous examp
             } catch (retryErr: any) {
                 console.error("Retry also failed to parse Gemini response as JSON:", text);
                 return json({ 
-                    error: 'Failed to parse grading result', 
+                    error: 'Failed to parse grading result. Please try again.', 
                     details: retryErr.message,
                     rawResponse: text,
                     retryAttempted: true
