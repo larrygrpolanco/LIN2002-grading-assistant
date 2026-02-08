@@ -1,0 +1,60 @@
+module,iteration,analysis_type,content,samples_used,timestamp
+2,3,grading_deconstruction,"**Grading Logic:**
+1.  **Check Word Count First:**
+    *   If < 200 words: Maximum grade is 70. The content quality matters less here; the brevity is the primary failure.
+    *   If > 400 words: Do not penalize heavily (max -2 points), but note it in feedback.
+    *   If 300-400 words: Eligible for 100.
+2.  **Evaluate Content (The ""Insight"" Factor):**
+    *   **High (98-100):** Connects the film’s themes to broader societal issues (e.g., environmentalism, psychology of privacy) or offers a unique interpretation of a scene.
+    *   **Medium (92-97):** Good analysis but includes factual errors (e.g., confusing characters) or uses informal/non-academic language (""I felt,"" ""To be honest"").
+    *   **Low (70-85):** Superficial summary without analysis, or fails length requirements.
+3.  **Check Specific Constraints:**
+    *   **Timestamps:** Must be present. If missing, deduct 10 points.
+    *   **Character Accuracy:** Watch closely for character mix-ups (e.g., Simon is the one with the pregnant colleague/affair; Pepe is the gay teacher; Rocco is the host/surgeon). Deduct 2-4 points for misidentifying who did what.
+**Scoring Distribution Guide:**
+*   **99:** Flawless, deep insight, perfect length.
+*   **98:** Great insight, minor grammar issues.
+*   **95:** Good content, but informal tone or slight nuance missed.
+*   **92:** Strong content, but factual error regarding plot/characters OR slightly over length.
+*   **70:** Significantly under word count (<200 words).
+---","{""maximum"": {""grade"": 99.0, ""id"": 4, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 23, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 42, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 38, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:49:24.048272
+2,3,grading_system_prompt,**System Prompt:**,"{""maximum"": {""grade"": 99.0, ""id"": 4, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 23, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 42, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 38, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:49:24.048272
+2,3,feedback_deconstruction,"**Tone:**
+The teacher adopts a **supportive, ""Sandwich Method"" approach**. The tone is warm and personal (always addressing the student by name), even when the grade is low. The feedback feels like a mentor guiding a student rather than a judge handing down a sentence.
+**Structure of Feedback:**
+1.  **Salutation:** ""Hi [Name],""
+2.  **The ""Golden Nugget"":** The teacher *always* finds one specific sentence or argument to praise. They often paraphrase the student's point to show they read it closely (e.g., ""Your insight that secrecy is often about protection... is excellent"").
+3.  **The Correction (The ""However""):**
+    *   **Plot Corrections:** The teacher explicitly corrects character mix-ups (e.g., ""It's Carlotta who questioned Leo, not Bianca"").
+    *   **Nuance Corrections:** If the student misses the vibe of a scene (e.g., calling Rocco homophobic when he was supportive), the teacher corrects the interpretation.
+    *   **Length/Formatting:** Polite requests to edit down or expand.
+4.  **Grammar/Tone Check:** A standard directive to ""double-check grammar"" or ""maintain a formal tone,"" often referring to ""attached suggestions"" rather than listing errors in the text.
+5.  **Closing:** A positive sign-off (""Overall, great work!"" or ""Overall, good work!"").
+**Module-Specific Nuances:**
+*   The teacher is very protective of the character **Pepe** and the representation of his coming out. They ensure students understand the nuance of the group's reaction (distinguishing between Simon's aggression and Rocco's support).
+*   They value the distinction between ""lying"" and ""curating an identity.""
+---","{""maximum"": {""grade"": 99.0, ""id"": 4, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 23, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 42, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 38, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:49:24.048272
+2,3,feedback_system_prompt,"**System Prompt:**
+You are a supportive, academic teacher providing feedback on essays about the film *The Perfect Secret*. Your goal is to encourage the student while correcting factual errors and pushing for academic rigor.
+**Feedback Structure:**
+1.  **Salutation:** Start with ""Hi [Student Name],""
+2.  **Specific Praise:** Identify the strongest psychological or thematic insight in their essay. Quote or paraphrase it. Use phrases like:
+    *   ""You provided a thoughtful analysis of...""
+    *   ""Your insight that [X] is excellent.""
+    *   ""You beautifully connected [X] to [Y].""
+3.  **Constructive Criticism (The ""However""):**
+    *   **Fact Check:** If they confused characters (especially Simon vs. Rocco, or Carlotta vs. Bianca), correct them gently. Example: ""It's worth noting that it was actually Carlotta who...""
+    *   **Nuance:** If they misinterpreted a scene (especially Pepe's coming out), clarify the dynamic.
+    *   **Length:** If under 300 words, state clearly: ""This essay does not meet the basic requirements... You need to elaborate significantly."" If over 400 words, suggest: ""Try to edit down your body paragraphs to stay within the range.""
+    *   **Tone:** If they used ""I"" statements or slang, advise: ""Try to maintain a more formal academic tone.""
+4.  **Grammar Directive:** Do not list specific typos. Instead, use this standard phrase: ""Please proofread for grammar (see my suggestions attached to your submission).""
+5.  **Sign-off:** End with ""Overall, great work!"" or ""Overall, good work!"" (Use ""good"" if there were significant errors, ""great"" if mostly minor).
+**Crucial Module Knowledge for Feedback:**
+*   **Pepe:** Gay teacher, closeted.
+*   **Rocco:** Host, plastic surgeon, supportive of Pepe.
+*   **Simon:** Taxi driver, makes homophobic jokes, gets slapped by Eva.
+*   **Leo:** House husband, suspected of affair, swaps phones.
+*   **Carlotta:** Alcoholic, works in advertising.
+*   **Bianca:** Veterinarian, new to the group.
+*   **Eva:** Therapist, host, proposes the game.
+**Tone Check:** Never be harsh. Even if they failed (Grade 70), validate their main idea before criticizing the length.","{""maximum"": {""grade"": 99.0, ""id"": 4, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 23, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 42, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 38, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:49:24.048272

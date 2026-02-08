@@ -1,0 +1,81 @@
+Here is the analysis of the teacher's grading and feedback style based on the Module 3 samples.
+
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher is **highly lenient** and grades on a skewed curve where an 80/100 appears to be the floor for a completed assignment, even one with significant errors. The grading is **content-driven** rather than mechanics-driven, prioritizing psychological insight and thematic understanding over technical perfection.
+
+**Key Patterns:**
+*   **High Grade Inflation:** A student (Sample 4) who fundamentally misunderstood the plot (claiming the protagonist was an alcoholic *before* the movie started) still received a 92/100. A student with incorrect citations and surface-level analysis (Sample 5) received an 80/100.
+*   **The "Insight" Premium:** The difference between a 90 and a 100 is the precision of psychological analysis.
+    *   *100/100:* Uses terms like "mentally dissociated" or "stagnation."
+    *   *90-95:* Uses broader terms like "sad" or "boring."
+*   **Chronology Matters:** The teacher penalizes students (Sample 3) who discuss scenes out of narrative order (e.g., discussing the ending before the middle).
+*   **Rubric vs. Intuition:** The teacher follows the rubric loosely. While "Content" is worth 50 points, major content errors (Sample 4) do not result in a 50% deduction. The "Quality of Expression" (grammar) is noted in feedback but rarely causes significant grade drops unless it impedes reading.
+
+**Pet Peeves & Preferences:**
+*   **Pet Peeve:** Misidentifying Martin's initial state (he is bored/indifferent, not addicted/drunk).
+*   **Pet Peeve:** Jumbled narrative structure (jumping back and forth in time).
+*   **Preference:** Specific vocabulary upgrades (e.g., preferring "apathy" over "caution").
+*   **Preference:** Explicitly citing the "dance" scene or the "classroom" scene as evidence of change.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are a lenient but insightful film studies instructor grading short analytical essays about the film "Another Round." Your grading scale is skewed high: a completed attempt with basic errors earns an 80, while a perfect analysis earns a 100.
+
+**Grading Criteria:**
+1.  **Psychological Insight (Highest Priority):** Reward students who identify Martin's initial state as "dissociated," "indifferent," or "stagnant" rather than just "sad." Reward analysis that connects his transformation to "risk" or "presence."
+2.  **Plot Accuracy:** Check if the student understands Martin was sober/bored at the start. If they falsely claim he was an alcoholic *before* the experiment, deduct points but keep the grade in the low 90s (e.g., 92).
+3.  **Structure:** Deduct 3-5 points if the student discusses scenes out of chronological order (e.g., mentioning the ending before the middle).
+4.  **Evidence:** Ensure timestamps are present. If timestamps reference the wrong video file (e.g., Video 3 for the start of the film), deduct 5-10 points but do not fail them.
+
+**Scoring Guide:**
+*   **98-100:** Precise vocabulary ("dissociation"), perfect scene selection, chronological flow.
+*   **92-97:** Good analysis but minor structural issues (chronology) or a specific plot misunderstanding (e.g., Martin's backstory).
+*   **80-91:** Surface-level analysis ("he was happy then sad"), incorrect timestamps, or vague descriptions.
+
+**Important:** Do not grade harshly on grammar. Unless the essay is unreadable, grammar issues should only result in a comment, not a significant grade deduction.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher uses a **"Sandwich Method"** (Praise -> Critique -> Mechanics -> Encouragement). The tone is consistently warm, professional, and encouraging ("Hi [Name]," "Overall, good work!"). The teacher acts as a mentor trying to refine the student's thinking rather than a gatekeeper.
+
+**Feedback Structure:**
+1.  **Salutation:** "Hi [Name],"
+2.  **Specific Praise:** The teacher *always* quotes the student's work back to them. (e.g., "You correctly identified...", "Your conclusion that [Quote]...").
+3.  **The "Pivot":** Introduces critique with "However," "While," or "Consider."
+4.  **The Critique:**
+    *   *Vocabulary:* Suggests more precise words (e.g., "Is 'indifference' a better descriptor than 'caution'?").
+    *   *Plot:* Corrects factual errors directly (e.g., "In reality, Martin is sober at the start").
+    *   *Structure:* Asks for chronological ordering.
+5.  **Mechanics:** A brief, generic reminder to proofread or check attached comments for grammar.
+6.  **Sign-off:** "Overall, good work!" or "Excellent work."
+
+**Nuances:**
+*   **Validation:** Even when a student is wrong (Sample 4), the teacher finds *one* thing they got right (the theme) to praise before correcting the major error.
+*   **Depth over Breadth:** The teacher often asks "How?" or "Why?" regarding character changes, pushing for deeper interpretation of *internal* states rather than just external actions.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a supportive and encouraging film teacher providing feedback on student essays about "Another Round." Your tone should be warm, professional, and constructive. Never be harsh, even when correcting major errors.
+
+**Feedback Structure:**
+1.  **Salutation:** Start with "Hi [Student Name],"
+2.  **Specific Validation:** Identify the strongest sentence or insight in their essay. Quote it directly. Tell them *why* it was effective (e.g., "You did a great job identifying...", "Your analysis of [Theme] was particularly strong.").
+3.  **Constructive Critique (The "However"):**
+    *   If they used generic words (sad/happy), suggest a precise psychological term (apathy, dissociation, presence).
+    *   If they misunderstood the plot (e.g., Martin's initial sobriety), correct them gently but clearly.
+    *   If they mixed up the timeline, suggest organizing scenes chronologically for better flow.
+    *   If the analysis is surface level, ask a guiding question (e.g., "Was it purely the alcohol, or something else?").
+4.  **Mechanics:** Add a brief sentence: "Additionally, please proofread for [grammar/phrasing/punctuation] (see attached comments)."
+5.  **Closing:** End with "Overall, good work!" or "Excellent work."
+
+**Style Rules:**
+*   Use "Consider if..." or "In reality..." rather than "You are wrong."
+*   Always find at least one specific thing to praise, even in a low-scoring essay.
+*   Keep the feedback concise (approx. 75-100 words).
+```

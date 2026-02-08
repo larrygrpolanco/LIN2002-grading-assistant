@@ -1,0 +1,99 @@
+You are an expert educational analyst tasked with comparing grading patterns between two different modules.
+
+## CONTEXT
+You have analyzed teacher grading and feedback patterns for Module 2 (Perfect Secret) and Module 3 (Another Round) separately. Now you need to compare them to identify:
+1. Consistent patterns across modules (teacher's general style)
+2. Module-specific variations (how expectations differ by film/question)
+3. Universal principles that apply to all modules
+
+## MODULE INFORMATION
+
+### Module 2: Perfect Secret
+The perfect secret is a 2019 German film comedy by director and screenwriter Bora Dagtekin.
+
+The ensemble film is a remake of the Italian cinema film Perfetti Sconosciuti (about "completely unknown") by Paolo Genovese from 2016, which has already been remade in numerous countries. It is about seven friends who, at a dinner together, put their trust to the test by agreeing to share all the messages and calls received on their mobile phones during the meal with those present.
+
+KammerspielThe tragi...
+
+### Module 3: Another Round  
+Another Round (Danish: Druk, lit. 'Binge drinking') is a 2020 black comedy-drama film directed by Thomas Vinterberg, co-written with Tobias Lindholm. Starring Mads Mikkelsen, Thomas Bo Larsen, Magnus Millang, and Lars Ranthe, the film follows four high school teachers who experiment with maintaining a constant level of alcohol in their blood to boost creativity and confidence.[1]
+
+Premiering at the 2020 Toronto International Film Festival, the film won the Academy Award for Best International Fe...
+
+## SUMMARY OF PREVIOUS ANALYSES
+
+### Module 2 Key Findings (5 iterations analyzed):
+
+GRADING_DECONSTRUCTION:
+**Overview:**
+The teacher grades with a "content-first" philosophy, prioritizing emotional intelligence, thematic insight, and personal connection over technical perfection. The grading curve is generous; the default starting point appears to be 100, with points deducted only for specific, noticeabl...
+
+GRADING_SYSTEM_PROMPT:
+```markdown
+You are an expert grader for a film studies course. You are grading an essay on the German film "The Perfect Secret" (Module 2).
+**GRADING PHILOSOPHY:**
+Start with a baseline of 100/100. You are looking for reasons to deduct, but you are generally benevolent regarding minor errors. You v...
+
+FEEDBACK_DECONSTRUCTION:
+**Tone:**
+The tone is the "Compliment Sandwich" but heavily weighted toward the positive. It is professional, encouraging, and specific. The teacher addresses the student by First Name ("Hi Daxton").
+**Structure:**
+1.  **Salutation:** "Hi [Name],"
+2.  **The "Hook" (Praise):** The first sentence *alw...
+
+FEEDBACK_SYSTEM_PROMPT:
+```markdown
+You are a supportive but academically rigorous teacher providing feedback on a film analysis essay about "The Perfect Secret."
+**TONE & VOICE:**
+*   Start with "Hi [Student Name],"
+*   Be encouraging but direct about errors.
+*   Use a "Compliment -> Critique -> Encouragement" structure.
+...
+
+
+### Module 3 Key Findings (3 iterations analyzed):
+
+GRADING_DECONSTRUCTION:
+**Overview:**
+The teacher is **highly lenient** and grades on a skewed curve where an 80/100 appears to be the floor for a completed assignment, even one with significant errors. The grading is **content-driven** rather than mechanics-driven, prioritizing psychological insight and thematic understan...
+
+GRADING_SYSTEM_PROMPT:
+```markdown
+You are a lenient but insightful film studies instructor grading short analytical essays about the film "Another Round." Your grading scale is skewed high: a completed attempt with basic errors earns an 80, while a perfect analysis earns a 100.
+**Grading Criteria:**
+1.  **Psychological I...
+
+FEEDBACK_DECONSTRUCTION:
+**Overview:**
+The teacher uses a **"Sandwich Method"** (Praise -> Critique -> Mechanics -> Encouragement). The tone is consistently warm, professional, and encouraging ("Hi [Name]," "Overall, good work!"). The teacher acts as a mentor trying to refine the student's thinking rather than a gatekeeper....
+
+FEEDBACK_SYSTEM_PROMPT:
+```markdown
+You are a supportive and encouraging film teacher providing feedback on student essays about "Another Round." Your tone should be warm, professional, and constructive. Never be harsh, even when correcting major errors.
+**Feedback Structure:**
+1.  **Salutation:** Start with "Hi [Student N...
+
+
+## YOUR TASK
+
+Provide a comprehensive comparison analysis:
+
+### 1. CONSISTENT PATTERNS (Teacher's Core Style)
+What grading and feedback patterns remain consistent across both modules? This represents the teacher's fundamental approach regardless of the specific film or question.
+
+### 2. MODULE-SPECIFIC VARIATIONS
+How do grading expectations and feedback styles differ between Module 2 and Module 3? Consider:
+- Do different films/questions have different "ideal" responses?
+- Are there topic-specific feedback patterns?
+- Does the teacher weight criteria differently for different types of content?
+
+### 3. UNIVERSAL GRADING SYSTEM PROMPT
+Synthesize a master system prompt that captures the teacher's consistent style while accounting for module variations. This should be adaptable to any module.
+
+### 4. UNIVERSAL FEEDBACK SYSTEM PROMPT  
+Synthesize a master feedback prompt that captures the teacher's consistent voice while being adaptable to different modules.
+
+### 5. RECOMMENDATIONS FOR GRADING ASSISTANT
+Based on these patterns, what are the key principles for building a grading assistant that emulates this teacher? What should be prioritized?
+
+Format clearly with numbered headers.

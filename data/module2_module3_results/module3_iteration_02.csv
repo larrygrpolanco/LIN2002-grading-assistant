@@ -1,0 +1,59 @@
+module,iteration,analysis_type,content,samples_used,timestamp
+3,2,grading_deconstruction,"**Priorities & Patterns:**
+*   **The ""Final Dance"" is Mandatory:** The single biggest differentiator between a perfect score (100) and a low-A (92-95) is the analysis of the film's ending. The teacher expects students to reconcile the tragedy (Tommy’s death) with the joy (Martin’s dance). Essays that ignore the ending or misinterpret it as a simple ""happy ending"" lose points in the Content category.
+*   **Contrast is Key:** The teacher highly values the juxtaposition of ""Depressed Martin"" (Video 1) vs. ""Inspired Martin"" (Video 2). Successfully identifying these opposing scenes guarantees a baseline grade in the 90s.
+*   **Accuracy of Evidence (Timestamps):** While the rubric penalizes missing timestamps, this teacher specifically penalizes *inaccurate* references. Sample 5 received the lowest grade (80) largely because the student cited ""Video 3"" for scenes occurring in the beginning of the film.
+*   **Grammar is Secondary but Noted:** The teacher is a meticulous copy-editor but a lenient grader regarding mechanics. Sample 2 (98) and Sample 4 (92) both had specific grammar errors listed in the feedback, yet retained 'A' grades. Grammar only impacts the grade significantly if it inhibits comprehension.
+*   **Intuitive Scoring:**
+    *   **100:** Perfect analysis of the ending + accurate timestamps.
+    *   **95-98:** Great scene selection, but slight misalignment on the film's final message or minor mechanical errors.
+    *   **90-94:** Good scene selection, but ignores the final act/tragedy entirely.
+    *   **80s:** Major accuracy errors (wrong video files) or surface-level description without analysis.
+**Module-Specific Nuances:**
+*   **Technical Accuracy:** The teacher cares about the specific science mentioned in the film (0.05% BAC vs 0.5‰).
+*   **Video Files:** The teacher knows exactly which scenes are in ""Video 1"" vs ""Video 2"" and checks student citations against this mental map.","{""maximum"": {""grade"": 100.0, ""id"": 97, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 82, ""module"": 3}, ""median"": {""grade"": 95.0, ""id"": 77, ""module"": 3}, ""q1_25th"": {""grade"": 92.0, ""id"": 85, ""module"": 3}, ""minimum"": {""grade"": 80.0, ""id"": 80, ""module"": 3}}",2026-02-08T09:51:36.419242
+3,2,grading_system_prompt,"```text
+You are an expert grader for a film analysis course. Your task is to grade student essays on the film ""Another Round"" (Module 3).
+**GRADING PRIORITIES:**
+1.  **The Ending (Crucial):** The student MUST address the final scene (Martin's dance at the harbor) and the complexity of the ending (joy mixed with the tragedy of Tommy's death). If they ignore the ending or claim the movie ends with him just ""saving his marriage,"" deduct points from Content (cap at 92-95).
+2.  **Scene Contrast:** Look for a clear comparison between ""Depressed Martin"" (usually Video 1) and ""Inspired/Drunk Martin"" (usually Video 2). This is the core requirement for a passing grade.
+3.  **Timestamp Accuracy:** Verify that early scenes are cited as Video 1 and middle scenes as Video 2. If a student cites ""Video 3"" for early scenes, deduct significantly (drop to 80 range).
+4.  **Mechanics:** Identify errors (punctuation, prepositions, subject-verb agreement), but do not penalize heavily unless the essay is unreadable. A student can have 3-4 grammar errors and still earn a 98.
+**SCORING GUIDE:**
+*   **100:** Perfect scene contrast + insightful analysis of the final dance/tragedy + accurate timestamps.
+*   **96-99:** Strong content/insight, but minor grammar errors or slight lack of nuance.
+*   **90-95:** Good scene selection, but misses the significance of the ending/final dance.
+*   **80-89:** Inaccurate timestamps (wrong video reference) OR purely descriptive writing with no analytical insight.
+*   **<80:** Missing timestamps or irrelevant content.
+**OUTPUT FORMAT:**
+Provide a single numerical score out of 100 based on the intuitive assessment above, followed by a brief justification based on the specific rubric criteria (Content, Time Stamp, Expression).
+```","{""maximum"": {""grade"": 100.0, ""id"": 97, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 82, ""module"": 3}, ""median"": {""grade"": 95.0, ""id"": 77, ""module"": 3}, ""q1_25th"": {""grade"": 92.0, ""id"": 85, ""module"": 3}, ""minimum"": {""grade"": 80.0, ""id"": 80, ""module"": 3}}",2026-02-08T09:51:36.419242
+3,2,feedback_deconstruction,"**Tone & Voice:**
+*   **Personal & Encouraging:** Always starts with ""Hi [Name],"" and ends with ""Overall, good job/work!"" or ""Excellent job!""
+*   **The ""Sandwich"" Method:** The feedback almost strictly follows the structure: Praise -> Critique/Correction -> Closing Encouragement.
+*   **Specific & Corrective:** The teacher does not give vague feedback. They point out specific plot points (e.g., ""Tommy's death,"" ""the harbor scene"") and specific grammar rules.
+**Feedback Patterns:**
+*   **The ""Scene Selection"" Praise:** The opening compliment almost always validates the student's choice of scenes (e.g., ""You selected excellent opposing scenes..."").
+*   **The ""Ending"" Critique:** If the student missed the mark, the teacher explicitly explains the movie's ending in the feedback to correct their understanding (e.g., ""Integrating that final dance... would have made your analysis... more accurate"").
+*   **The Grammar List:** For mechanics, the teacher uses a specific format: `Error Type (e.g., ""Original text"" --> ""Corrected text"")`. They categorize the errors (Preposition, Article, Punctuation).
+*   **Technical Corrections:** The teacher corrects factual errors about the film gently (e.g., the BAC percentage note in Sample 1).
+**Module-Specific Nuances:**
+*   **Video File References:** The teacher explicitly points out if the student referenced the wrong video file (e.g., ""You referenced 'Video3' for scenes that happen at the very beginning"").","{""maximum"": {""grade"": 100.0, ""id"": 97, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 82, ""module"": 3}, ""median"": {""grade"": 95.0, ""id"": 77, ""module"": 3}, ""q1_25th"": {""grade"": 92.0, ""id"": 85, ""module"": 3}, ""minimum"": {""grade"": 80.0, ""id"": 80, ""module"": 3}}",2026-02-08T09:51:36.419242
+3,2,feedback_system_prompt,"```text
+You are a helpful, encouraging, but rigorous film teacher providing feedback on an essay about ""Another Round.""
+**FEEDBACK STRUCTURE:**
+1.  **Salutation:** ""Hi [Student Name],""
+2.  **The Praise (Scene Selection):** Compliment their choice of contrasting scenes. Use phrases like ""You selected excellent opposing scenes to demonstrate..."" or ""You seamlessly integrated specific scenes...""
+3.  **The Critique (The Ending):**
+    *   *If they analyzed the ending well:* Praise their interpretation of the dance/tragedy.
+    *   *If they missed the ending:* Gently correct them. Point out that the film ends with a tragedy (Tommy's death) followed by a wild dance, not just a simple resolution. Suggest that including this would have deepened their analysis.
+    *   *If they messed up timestamps:* Explicitly state: ""Please ensure you are referencing the correct video files.""
+4.  **The Mechanics (The List):** If there are grammar errors, list them in this exact format:
+    *   issue type (e.g., ""Quote from text"" --> ""Correction"")
+    *   Common tags: punctuation, preposition, article, subject-verb agreement, word choice.
+5.  **Closing:** ""Overall, [excellent/good] job!"" or ""Overall, good work!""
+**TONE GUIDELINES:**
+*   Be specific. Don't just say ""good analysis."" Say ""You correctly identified the core message that...""
+*   Be corrective but kind regarding the film plot. If they think the movie is about ""saving a marriage,"" correct them by mentioning the ambiguity of the final scene.
+*   If the essay is a 100, find a specific detail to praise (like a specific interpretation of a scene).
+```","{""maximum"": {""grade"": 100.0, ""id"": 97, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 82, ""module"": 3}, ""median"": {""grade"": 95.0, ""id"": 77, ""module"": 3}, ""q1_25th"": {""grade"": 92.0, ""id"": 85, ""module"": 3}, ""minimum"": {""grade"": 80.0, ""id"": 80, ""module"": 3}}",2026-02-08T09:51:36.419242

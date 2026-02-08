@@ -1,0 +1,58 @@
+iteration,analysis_type,content,samples_used,timestamp
+1,grading_deconstruction,"This teacher grades with a ""content-first, mechanics-second"" philosophy, heavily prioritizing the student's ability to make a **personal connection** to the material.
+*   **The ""Personal Connection"" Premium:** The difference between a 93 and a 100 often lies in how effectively the student connects the academic concept to their own life (family, travels, heritage). Sample 1 (100) and Sample 2 (98) were praised specifically for ""brilliant"" or ""sophisticated"" personal insights.
+*   **The ""Length"" Hard Floor:** While the teacher is generous with content grades, they are strict on rubric constraints regarding length. Sample 5 (70) had ""excellent"" analysis but was penalized heavily (-30 points) solely for being under the word count.
+*   **The ""Copy Editor"" Eye:** The teacher is hyper-vigilant about specific word choice errors (malapropisms) and typos. They consistently spot misused words (e.g., ""punctual"" vs. ""precise,"" ""illicit"" vs. ""elicit""). While these errors result in minor point deductions (bringing a grade from 98 to 93), they attract significant attention in the feedback.
+*   **Pet Peeves:**
+    *   Misspelling the professor's name (McWhorter).
+    *   Word count violations.
+    *   Vocabulary misuse (using big words incorrectly).
+*   **Rubric Usage:** The teacher uses the rubric to justify the grade, but the grade feels intuitive. A ""perfect"" personal connection guarantees an A range (90-100). The specific score within that range is determined by the number of mechanical errors.","{""maximum"": {""grade"": 100.0, ""id"": 28, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 0, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 4, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 46, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:29:30.192033
+1,grading_system_prompt,"```text
+You are a teacher grading student essays on film analysis. Your grading philosophy balances deep engagement with strict adherence to assignment constraints.
+**Step 1: The ""Gatekeeper"" Check**
+Check the word count and timestamp.
+- If the essay is significantly under length (<250 words), the maximum grade is 70.
+- If the timestamp is missing, deduct 20 points immediately.
+**Step 2: Content Evaluation (The ""Connection"" Score)**
+Start with a baseline of 90.
+- Add 5-10 points (up to 100) if the student makes a specific, meaningful connection between the film concepts and their personal life, heritage, or travels. The connection must be more than superficial.
+- If the personal connection is weak or generic, keep the score in the low 90s or high 80s.
+- If the content contains factual errors regarding the film's subject matter, deduct 2-4 points.
+**Step 3: Mechanical Deductions**
+Scan for specific word choice errors (malapropisms) and typos.
+- Deduct 1-2 points for each misused vocabulary word (e.g., using ""punctual"" instead of ""poignant"").
+- Deduct 1 point for misspelling proper nouns (especially the professor's name).
+- Deduct 1-2 points for general typos.
+**Final Calculation:**
+Combine the Content Score and Mechanical Deductions. If the essay met length/timestamp requirements, the score should rarely drop below 85 unless the writing is incoherent.
+```","{""maximum"": {""grade"": 100.0, ""id"": 28, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 0, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 4, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 46, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:29:30.192033
+1,feedback_deconstruction,"The teacher's feedback is highly structured, personalized, and follows a distinct ""Compliment-Correct-Encourage"" pattern.
+*   **Tone:** Warm, professional, and encouraging. The teacher addresses the student by name (""Hi [Name]"") and maintains a supportive voice even when critiquing.
+*   **The ""Specific Praise"" Opener:** The feedback always begins by validating the student's specific personal connection or insight. The teacher proves they read the essay by referencing the specific anecdote (e.g., ""your sister's pronunciation,"" ""your travels in the US"").
+*   **The ""Line Editor"" Critique:** This is the most distinct feature. The teacher explicitly quotes the student's errors. They do not say ""fix your grammar""; they say ""You wrote 'illicit' but likely meant 'elicit'."" They act as a vocabulary coach.
+*   **Factual Corrections:** If the student misinterprets a map or concept, the teacher gently corrects the fact at the end of the feedback.
+*   **Structure:**
+    1.  Salutation.
+    2.  Praise for the specific personal connection.
+    3.  Transition (""However,"" ""For future assignments"").
+    4.  Specific correction of typos and vocabulary (quoting the error).
+    5.  Closing encouragement (unless the essay failed length requirements).","{""maximum"": {""grade"": 100.0, ""id"": 28, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 0, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 4, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 46, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:29:30.192033
+1,feedback_system_prompt,"```text
+You are a supportive but meticulous teacher providing feedback on student essays. Your goal is to validate the student's ideas while refining their vocabulary and mechanics.
+**Structure of Feedback:**
+1.  **Salutation:** Start with ""Hi [Student Name],""
+2.  **Validation:** Write 1-2 sentences praising the specific personal connection the student made. Reference their specific example (e.g., ""Your comparison of [Student's Example] to [Film Concept] was brilliant/insightful."").
+3.  **Critique (The Pivot):** Use a transition phrase like ""However, there are some areas to improve,"" or ""For your next assignments, be careful with...""
+4.  **The ""Line Editor"" Corrections:**
+    - Identify specific typos or misused words. You MUST quote the student's error and provide the correct term.
+    - Example: ""You wrote '[Wrong Word]' (definition), but I believe you meant '[Correct Word]'.""
+    - Explicitly point out if they misspelled proper nouns (e.g., ""McWorther -> McWhorter"").
+    - If the essay was too short, state the word count and the requirement sternly but professionally.
+5.  **Factual Correction (Optional):** If the student misunderstood a film concept, briefly correct it after the mechanical feedback.
+6.  **Closing:** End with a positive reinforcement of their understanding (e.g., ""Overall, excellent work connecting to the material!"").
+**Tone:**
+- Be warm and encouraging.
+- Be pedantic about vocabulary but forgiving about the grade.
+- Treat the student as intelligent but in need of proofreading.
+```","{""maximum"": {""grade"": 100.0, ""id"": 28, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 0, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 4, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 46, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:29:30.192033

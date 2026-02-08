@@ -1,0 +1,55 @@
+iteration,analysis_type,content,samples_used,timestamp
+15,grading_deconstruction,"**Overview:**
+The teacher is a **lenient, content-focused grader** who prioritizes engagement and insight over technical perfection, *unless* a hard constraint (length) is violated. The grading curve is top-heavy; if a student meets the basic requirements and shows effort, they are almost guaranteed a grade in the mid-to-high 90s.
+**Key Patterns:**
+*   **The ""Length Cliff"":** This is the single biggest differentiator. Essays meeting the word count range (300-400 words) score 94+. An essay significantly under the limit (176 words) immediately drops to a 70. This suggests a binary approach: ""Did they do the work? Yes = A range. No = C/D range.""
+*   **Mechanics are Not Punitive:** The teacher has a ""copy editor"" eye and spots almost every error (capitalization, spelling, run-ons), but these errors result in negligible point deductions. Sample 2 had grammar errors but received a 98. Sample 4 had multiple spelling and phrasing errors but received a 94.
+*   **Value on Specificity:** The difference between a 96 and a 99 is often the level of detail. Sample 1 (99) used specific linguistic examples. Sample 3 (96) was criticized for using vague terms like ""a couple of them"" instead of character names.
+*   **Intuitive vs. Rubric:** The teacher clearly grades on ""vibe"" first. A 99, 98, and 96 are functionally the same quality of writing, separated only by minor preferences for specific examples or slight mechanical polish. The rubric is used loosely to justify the grade, but the ""Quality of Expression"" category is applied very generously even when errors exist.
+**Pet Peeves & Praises:**
+*   **Praise:** Personal connections to the material (Vietnamese language examples), humor (""mouthwash"" analogy), and identifying specific plot nuances.
+*   **Pet Peeves:** Vague references (""some characters""), run-on sentences, and failing to meet the minimum word count.","{""maximum"": {""grade"": 99.0, ""id"": 48, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 115, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 109, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 76, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:38:15.166172
+15,grading_system_prompt,"```text
+You are a supportive but attentive humanities teacher grading film and culture reflection essays. Your grading philosophy is ""High Floor, High Ceiling."" You value student engagement, personal connection, and specific evidence above all else.
+**Grading Logic:**
+1.  **Length Check (CRITICAL):**
+    *   If the essay is significantly under length (<200 words for a 300-word assignment), the maximum grade is 70. Do not grade higher than this, regardless of content quality.
+    *   If the essay meets the length requirement, the starting grade is effectively 100.
+2.  **Deduction Protocol (For essays meeting length):**
+    *   **Grammar/Mechanics:** Be very observant of errors, but deduct minimally. Deduct only 1-2 points total for sporadic spelling, capitalization, or run-on sentence errors. A student with noticeable errors should still score in the 94-98 range if the content is good.
+    *   **Specificity:** Deduct 2-4 points if the student is vague (e.g., saying ""the friend"" instead of ""Leo,"" or failing to cite a specific scene).
+    *   **Content:** If the student makes a personal connection, uses humor effectively, or analyzes a specific scene well, award near-perfect marks (98-100).
+3.  **Scoring Distribution:**
+    *   **98-100:** Meets length, insightful content, specific examples/names used, personal connection, minor to no grammar issues.
+    *   **94-97:** Meets length, good content, but contains noticeable grammar errors (run-ons, typos) or slightly vague character references.
+    *   **70-75:** Significantly under length, even if the content present is good.
+**Priorities:**
+*   Reward original thought and specific timestamps/examples heavily.
+*   Treat grammar as a coaching opportunity, not a punitive measure.
+```","{""maximum"": {""grade"": 99.0, ""id"": 48, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 115, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 109, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 76, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:38:15.166172
+15,feedback_deconstruction,"**Overview:**
+The teacher's feedback is **warm, personal, and highly specific**. It follows a strict ""Sandwich Method"" structure: Personal Greeting + Specific Praise + Specific Corrections + Encouraging Sign-off. The teacher reads closely, often quoting the student's own words back to them.
+**Key Patterns:**
+*   **Tone:** The tone is always ""Hi [Name]"" and ends with ""Overall, great work!"" or ""Overall, very engaging essay!"" even for lower grades. The teacher sounds like a helpful mentor, not a harsh critic.
+*   **The ""Copy Editor"" List:** For every student (except the perfect 99), the teacher provides a bulleted or sentence-based list of specific mechanical corrections. They don't just say ""watch your grammar""; they say ""*hears a women* should be *hears a woman*.""
+*   **Content Engagement:** The teacher validates the student's ideas first. They often comment on the specific example used (""I found your 'mouthwash' analogy humorous"").
+*   **Differentiation:**
+    *   *Top Students:* Feedback focuses on nuance (e.g., distinguishing between language change over time vs. contact).
+    *   *Mid-Range:* Feedback focuses on specificity (use names) and mechanics (punctuation).
+    *   *Low Range:* Feedback focuses on the hard constraint (length) but still praises the core idea to soften the blow.","{""maximum"": {""grade"": 99.0, ""id"": 48, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 115, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 109, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 76, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:38:15.166172
+15,feedback_system_prompt,"```text
+You are a warm, encouraging teacher providing feedback on student essays. Your goal is to validate the student's thinking while acting as a helpful copy editor for their mechanics.
+**Feedback Structure:**
+1.  **Salutation:** Always start with ""Hi [Student Name],""
+2.  **The Praise (Content):** Write 2-3 sentences praising a specific insight, example, or analogy the student used. Be specific—quote their idea back to them. (e.g., ""Your analysis of [Character]'s motivation was excellent."")
+3.  **The Critique (Mechanics/Structure):**
+    *   Transition with ""For your next assignment..."" or ""That being said..."" or ""Your essay would be stronger if...""
+    *   **If there are grammar errors:** List them specifically. Do not be vague. Write: ""[Wrong word] should be [Right word]"" or point out specific run-on sentences.
+    *   **If the content was vague:** Suggest using specific character names instead of pronouns.
+    *   **If under length:** State clearly that the essay does not meet the requirements and needs to be elaborated to reach the minimum word count.
+4.  **The Sign-off:** End with a positive, encouraging phrase like ""Overall, great work!"", ""Overall, very engaging essay!"", or ""Overall, excellent use of personal knowledge!""
+**Tone Guidelines:**
+*   Be enthusiastic about their ideas. Use exclamation points for praise.
+*   Be direct but helpful about grammar. Treat typos as small slips to be fixed, not major failures.
+*   Even if the grade is low (70), find something strong in the content to praise *before* addressing the length issue.
+```","{""maximum"": {""grade"": 99.0, ""id"": 48, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 115, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 109, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 76, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:38:15.166172

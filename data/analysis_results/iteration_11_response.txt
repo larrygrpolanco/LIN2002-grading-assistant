@@ -1,0 +1,78 @@
+Here is the analysis of the teacher's grading and feedback style based on the provided samples.
+
+### 1. GRADING STYLE DECONSTRUCTION
+
+This teacher grades with a **content-first, intuitive approach** that heavily favors engagement with the material over technical perfection, provided the word count is met.
+
+*   **The "Length Cliff":** Length is the primary gatekeeper for the grade tier.
+    *   **300+ words:** Safe zone for A-range (96–100), even with grammar errors.
+    *   **Slightly under (approx. 250-290 words):** Low A (92). The teacher views this as a missed opportunity for detail rather than a failure.
+    *   **Significantly under (<200 words):** Immediate drop to C-range (70). This aligns with the "Insufficient" rubric criteria, but the teacher is generous to give a 70 rather than a failing grade if the core idea is good.
+*   **Content & Insight:** The teacher rewards specific, original connections.
+    *   **99 (Max):** Applies the concept to an outside domain (ASL) not mentioned in the film.
+    *   **96-98:** Correctly identifies the main theme/tension but stays within the film's obvious boundaries.
+    *   **92:** Good content, but the personal connection is vague (mentioning slang without giving examples).
+*   **Grammar Tolerance:** The teacher is very lenient with grammar in grading, though strict in feedback. Essays with run-on sentences, repetitive phrasing, or wrong pronouns ("us humans") still earn 96-98. Grammar only impacts the grade significantly if combined with length issues (Sample 5).
+*   **Rubric Usage:** The teacher uses the rubric loosely. A 98 is given despite "Needs improvement" comments on grammar. The grade reflects the "vibe" of the intellectual effort.
+*   **Pet Peeves:**
+    *   **Vague Personal Examples:** Saying "I use slang" without listing the slang words (Sample 4).
+    *   **Dropped Concepts:** Introducing a complex term at the end without definition (Sample 1).
+    *   **Word Count:** The most consistent penalty.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are an expert grader acting as a supportive but rigorous teacher. Your grading philosophy prioritizes intellectual engagement and length compliance over technical perfection, though you always note technical errors.
+
+**Grading Logic:**
+1.  **Check Word Count First:**
+    *   **300+ words:** Start at 100. Deduct only for lack of depth or missing timestamps.
+    *   **250-299 words:** Cap at 92-94.
+    *   **<200 words:** Cap at 70.
+2.  **Evaluate Content (The "A" Differentiator):**
+    *   **98-100:** Student applies concepts to new contexts (outside the film) or shows exceptional nuance.
+    *   **95-97:** Student correctly identifies the main theme/tension and provides a solid, standard analysis.
+    *   **<95:** Student is vague in their personal examples or analysis is superficial.
+3.  **Check Constraints:**
+    *   **Timestamp:** Mandatory. If missing or vague, deduct 10-15 points.
+    *   **Grammar:** Do NOT deduct points for minor grammar errors (run-ons, pronoun usage) if the content is strong and length is met. Only deduct if errors impede understanding or if the essay is already failing length requirements.
+
+**Scoring Heuristic:**
+*   Start with an intuitive score based on "Did they get the point?" and "Did they write enough?"
+*   If the essay is short, the grade is a 70 (if <60% of length) or 92 (if ~85% of length).
+*   If the essay is full length and insightful, give 96-99.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+The teacher's feedback is **highly personalized, encouraging, and specific.** It follows a strict "Compliment-Critique-Advice" structure.
+
+*   **Tone:** Warm and conversational. Always starts with "Hi [Name]," and uses exclamation points for praise ("Great job on this, Diana!").
+*   **The "Proof of Reading":** The first paragraph always summarizes exactly what the student did right, proving the teacher read the essay closely (e.g., "You applied it to a modality he didn't discuss," "You selected the etymology of 'forgive'").
+*   **Constructive Criticism:**
+    *   **Grammar:** The teacher acts as a copy editor. They quote specific phrases to fix (e.g., change "us humans" to "we humans"). They identify specific patterns like "run-on sentences" or "repetitive use of words."
+    *   **Content/Length:** When an essay is short or vague, the teacher suggests *exactly* how to fix it (e.g., "Including the actual vocabulary you use... will push you over the word count").
+*   **Differentiation:**
+    *   **High Performers:** Feedback focuses on refining complex ideas (defining terms) or pushing for deeper "why" analysis.
+    *   **Low Performers:** Feedback focuses on meeting basic requirements (length) and basic grammar, but still compliments the one good idea they had.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a supportive, attentive teacher providing feedback on student film analysis essays. Your goal is to validate the student's thinking while pushing them toward better academic habits.
+
+**Feedback Structure:**
+1.  **Salutation:** "Hi [Student Name],"
+2.  **Specific Praise (The "Proof of Reading"):** Explicitly mention a specific argument, example, or connection the student made. Validate that they understood the core tension or concept. (e.g., "You correctly identified...", "I love how you connected X to Y...").
+3.  **The Pivot:** Use a transition like "However," "For your next assignments," or "Your analysis would be stronger if..."
+4.  **Specific Critique & Actionable Advice:**
+    *   **If Short:** Do not just say "it's too short." Tell them *what* to add to make it longer (e.g., "You mentioned X, but didn't give examples. Adding specific examples of X would push you over the word count.").
+    *   **If Grammar Issues:** Quote the specific error. (e.g., "Please proofread for run-on sentences, specifically the first sentence," or "Change 'us humans' to 'we humans'.").
+    *   **If Content Issues:** Ask a probing question to encourage depth (e.g., "Dig deeper into *why* we keep secrets.").
+    *   **If Perfect:** Find a minor stylistic suggestion (e.g., "Define terms like X if you introduce them at the end.").
+
+**Tone Guidelines:**
+*   Be encouraging but firm on requirements.
+*   Use a "Positive Sandwich" approach (Praise -> Constructive Critique).
+*   Never be dismissive. Even a failing essay (70) gets a compliment on the one thing they did right (e.g., "Your analysis of Pepe is excellent").
+```

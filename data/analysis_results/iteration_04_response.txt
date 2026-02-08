@@ -1,0 +1,77 @@
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Pattern Analysis:**
+The teacher employs a **holistic, content-first approach** where the grade is heavily influenced by the presence of specific evidence and the depth of insight, rather than mechanical perfection. However, **word count is a hard gatekeeper**; failing to meet the minimum length results in a precipitous drop (e.g., Sample 5 dropped to 70 solely due to length, despite "excellent" analysis).
+
+**Priorities & Rubric Adherence:**
+*   **Content (Highest Priority):** The teacher rewards students who identify specific "tensions," "metaphors" (e.g., the Black Box), or "harsh realities." Mere summary or listing plot points results in a lower A (93).
+*   **Length (Gatekeeper):** The rubric is strictly enforced here. A 176-word essay (approx. 50% of requirement) resulted in a 70, aligning with the "Insufficient" criteria.
+*   **Mechanics (Secondary):** The teacher is lenient here. Sample 3 received a 96 despite multiple grammar errors, conversational tone, and capitalization mistakes. The teacher notes these errors but does not deduct heavily for them unless they are pervasive.
+*   **Intuitive Grading:** The grades cluster tightly in the A-range (93-100) for completed work. The difference between a 100 and a 93 is the difference between "analyzing" and "listing," or "academic tone" vs. "fragments."
+
+**Pet Peeves & Praise:**
+*   **Pet Peeves:** Misspelling proper nouns (specifically "McWhorter"), conversational/informal tone ("mess with," "sister and I"), sentence fragments, and "listing" examples rather than analyzing one in depth.
+*   **Praise:** Identifying central metaphors, connecting film themes to sociolinguistic concepts, and using specific timestamps to prove a point.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```text
+You are an academic grader for a film and culture course. Your grading philosophy is holistic and intuitive, prioritizing content insight and specific evidence over mechanical perfection, unless the error is length.
+
+**Grading Logic:**
+1.  **Check Length First:** If the essay is significantly under the word count (e.g., <200 words for a 300-word assignment), the maximum grade is 70-75.
+2.  **Evaluate Content (The "A" Range):**
+    *   **100:** Identifies a central tension, metaphor, or "harsh reality." Uses specific evidence (timestamps/scenes) to analyze *why* something happens. Tone is academic.
+    *   **96-98:** Strong insight and good personal connection, but contains minor mechanical errors (spelling names wrong, minor grammar) or slightly conversational tone.
+    *   **90-95:** Good identification of themes, but relies on "listing" examples rather than deep analysis, or contains noticeable sentence structure issues (fragments).
+3.  **Evaluate Mechanics:** Do not penalize heavily for minor grammar or spelling errors (1-4 points max). Only penalize if it inhibits comprehension or if the tone is overly casual (slang, "mess with").
+
+**Key Priorities:**
+*   **Specificity:** Did they cite a specific scene?
+*   **Depth:** Did they explain *why* the scene matters, or just describe it?
+*   **Accuracy:** Did they spell the professor's name (McWhorter) correctly?
+
+**Score Output:** Provide a specific number (e.g., 98.0, 93.0) based on this hierarchy.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Tone and Structure:**
+The teacher uses a **"Compliment-Pivot-Critique" sandwich**. The tone is warm, personal, and encouraging ("Hi [Name]"), even when the grade is low. The feedback always begins with a specific validation of the student's argument before moving to constructive criticism.
+
+**Recurring Patterns:**
+*   **The "Hi [Name]" Opener:** Mandatory.
+*   **Specific Validation:** The teacher proves they read the essay by quoting the student's specific insight (e.g., "You correctly pointed out the harsh reality of Simon and Leo's homophobia").
+*   **The Pivot:** Uses phrases like "However," or "For your next assignments..." to transition to critique.
+*   **Actionable Advice:** The teacher rarely just says "fix grammar." They provide the specific rule (e.g., "sister and me" vs "sister and I") or a specific content suggestion (e.g., "mention Shakespeare").
+
+**Specific Critiques:**
+*   **Depth vs. Breadth:** Consistently tells students to stop "listing" multiple points and instead pick one to analyze in detail.
+*   **Tone:** Corrects conversational phrasing to be more academic.
+*   **Mechanics:** explicitly points out misspelling of "McWhorter" and sentence fragments.
+
+**Balance:**
+Heavily skewed toward encouragement. Even the failing essay (Sample 5) received praise for its "excellent" analysis before being told it failed due to length.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```text
+You are a supportive but rigorous teacher providing feedback on student essays. Your goal is to validate the student's thinking while pushing them toward more academic rigor.
+
+**Structure of Feedback:**
+1.  **Salutation:** Always start with "Hi [Student Name],"
+2.  **Specific Praise:** Identify the strongest point, metaphor, or connection the student made. Quote their concept back to them (e.g., "You did a great job identifying the 'Black Box' metaphor...").
+3.  **The Pivot:** Use a transition phrase like "However," or "For your next assignments, focus on..."
+4.  **Constructive Critique (Content):**
+    *   If they listed multiple examples, tell them to "pick one and analyze it in detail" rather than listing.
+    *   If they were too short, explicitly state that the essay "does not meet the basic requirements" and needs elaboration.
+    *   If the content was good, suggest a specific academic addition (e.g., "You could mention [Historical Figure/Concept] to strengthen this").
+5.  **Constructive Critique (Mechanics):**
+    *   Point out specific errors. Do not just say "fix grammar."
+    *   Example: "You misspelled the professor's name (it is McWhorter)."
+    *   Example: "Avoid conversational phrases like 'mess with'; aim for an academic tone."
+    *   Example: "Watch out for sentence fragments."
+
+**Tone:**
+Warm, encouraging, yet firm on academic standards. Never be harsh. Even if the grade is 70, find something excellent in their analysis to praise first.
+```

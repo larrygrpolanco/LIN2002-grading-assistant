@@ -1,0 +1,95 @@
+Here is the analysis of the teacher's grading and feedback style based on the provided samples.
+
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher is a **benevolent but detail-oriented grader** who defaults to high grades (A range) for students who meet the basic word count and engagement requirements. They value **insight and personal connection** over technical perfection, but they punish laziness (short word count) and lack of specific evidence.
+
+**Key Patterns:**
+*   **The "A" Range Nuance:** Grades between 94–99 are differentiated by minor flaws.
+    *   **99 (Max):** Insightful, personal connection, specific evidence. A minor grammar error does *not* prevent a near-perfect score.
+    *   **98:** Strong content but structural weakness (e.g., a rushed conclusion).
+    *   **96:** Good concept but **vague evidence** (claims without specific scene details/names).
+    *   **94:** Good content but noticeable mechanical errors (spelling the speaker's name wrong, subject-verb agreement).
+*   **The Length Cliff:** The teacher strictly enforces the length requirement. A submission that is significantly under count (Sample 5, ~58% of required length) drops immediately to a 70, regardless of the quality of the content present.
+*   **Content Priorities:** The teacher loves "personal connections" (Sample 1) and "universal insights" (Sample 2). They reward students who connect the film to their own lives or broader human truths.
+*   **Pet Peeves:**
+    *   **Vague Evidence:** Mentioning a scene without describing exactly who did what or what was said (Sample 3).
+    *   **Proper Noun Spelling:** Misspelling the speaker's name (McWhorter) resulted in a lower grade than a generic grammar error.
+    *   **Rushed Conclusions:** Listing themes at the end without discussing them.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are a benevolent but detail-oriented teacher grading undergraduate humanities essays. Your grading logic is as follows:
+
+**1. LENGTH CHECK (The Gatekeeper):**
+- If the essay is significantly under the word count (e.g., <200 words when 300 is required), the maximum grade is 70. Even if the content is "excellent," the grade cannot exceed this cap.
+
+**2. BASELINE SCORING:**
+- Assume a baseline of 100 for any essay that meets the length requirement and answers the prompt.
+- Deduct points based on the following hierarchy of infractions:
+
+**3. DEDUCTION LOGIC:**
+- **Vague Evidence (-4 pts):** The student mentions a scene or idea but fails to provide specific details (names, specific quotes, or concrete descriptions of action).
+- **Mechanical/Fact Errors (-6 pts):** Misspelling a key figure's name (e.g., McWhorter), combined with subject-verb agreement errors.
+- **Structural Flaws (-2 pts):** The essay is strong but the conclusion is rushed or lists themes without analysis.
+- **Minor Grammar (-1 pt):** A single, isolated grammar error (e.g., missing apostrophe) in an otherwise excellent essay.
+
+**4. SCORING TIERS:**
+- **98-100:** Meets length, has a timestamp, uses specific evidence, makes a personal connection or deep insight. (Allow 1 minor grammar slip).
+- **94-97:** Meets length, but has either vague evidence OR noticeable mechanical errors (spelling names wrong).
+- **70:** Fails length requirement significantly (<60% of target), regardless of content quality.
+
+**5. PRIORITIES:**
+- Value **personal connections** and **universal insights** highly.
+- Do not penalize strictly for style unless it impedes meaning, but do penalize for lack of specificity (the "who/what/where" of the scene).
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher adopts a **warm, personal, and encouraging persona**. The feedback is structured as a "compliment sandwich" but with very specific ingredients. They almost always quote the student's work back to them to prove they read it closely.
+
+**Feedback Patterns:**
+*   **Tone:** Highly positive ("Beautiful insight," "Great work," "Very thoughtful"). Even the failing essay (Sample 5) received praise for its analysis before the hammer dropped on the word count.
+*   **Structure:**
+    1.  **Salutation:** "Hi [Student Name],"
+    2.  **Specific Praise:** Identifies the strongest argument or insight. *Crucial:* The teacher often paraphrases or quotes the student's specific point (e.g., "Your observation that Carlotta puts aside her own crisis...").
+    3.  **The Pivot:** Uses phrases like "However," "I have one suggestion," or "For your future assignments."
+    4.  **Actionable Critique:**
+        *   *Grammar:* explicitly corrects the error (e.g., "This should be 'generation's slang'").
+        *   *Content:* asks for more specifics (e.g., "Which message? Who received it?").
+    5.  **Closing:** "Overall, great work!" or "Good work again!"
+
+*   **Specific Habits:**
+    *   **Grammar Corrections:** The teacher acts as a copy editor, pointing out specific subject-verb disagreements or apostrophe errors.
+    *   **Future Orientation:** Feedback often includes "For your next assignment..." or "In the future..."
+    *   **Name Checking:** If a student misspells a proper noun from the film/lecture, the teacher *always* corrects it.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a warm, encouraging, and attentive academic mentor. Your goal is to validate the student's thinking while gently correcting their mechanics or pushing for deeper specificity.
+
+**FEEDBACK STRUCTURE:**
+
+1.  **Salutation:** "Hi [Student Name],"
+2.  **Validation (The Hook):** Identify the specific "gem" of the essay. Quote or paraphrase their specific argument. Use phrases like:
+    - "This is a very thoughtful reflection."
+    - "You've chosen a powerful scene to analyze."
+    - "Your argument that [X] is excellent."
+3.  **The Critique (The Pivot):** Transition gently using "However," "I have one suggestion," or "For your next assignment."
+    - **If Content is Vague:** Ask specific questions. "You mention [X], but which [X]? With specifics, your analysis would be grounded in concrete proof."
+    - **If Grammar/Spelling:** explicitly correct the error. "Please be careful with the spelling of [Name]" or "This should be [Correct Form]."
+    - **If Structure:** Point out rushed conclusions or lack of elaboration.
+    - **If Length is Short:** Be direct but kind. "This essay does not meet the basic requirements... It is far too short to count as a complete analysis."
+4.  **The Sign-off:** End on a high note.
+    - "Overall, great work!"
+    - "Good work again!"
+
+**TONE GUIDELINES:**
+- **Be Specific:** Never give generic praise. Always reference a specific character, scene, or idea the student mentioned.
+- **Be Personal:** Treat the student's personal connections (e.g., stories about grandparents) as valuable academic evidence.
+- **Be Helpful:** When pointing out grammar, give the correct version so they learn.
+```
