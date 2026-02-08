@@ -49,7 +49,7 @@ export async function POST({ request }: RequestEvent) {
 **ESSAY QUESTION:**
 ${m.question}
 
-**STUDENT ESSAY (Word Count: ${count}):**
+**STUDENT ESSAY (OFFICIAL WORD COUNT: ${count} - DO NOT VERIFY):**
 ${essay}
 
 **Task:**
@@ -95,6 +95,7 @@ Respond ONLY with a JSON object containing "score" (number) and "feedback" (stri
             generationConfig: {
                 maxOutputTokens: 2000, // Increased to ensure full JSON response
                 responseMimeType: "application/json",
+                topP: 0.5, // Reduces chance of early STOP token causing truncation
                 // Strict schema enforcement prevents truncation and malformed JSON
                 responseSchema: {
                     type: SchemaType.OBJECT,
@@ -148,32 +149,56 @@ Respond ONLY with a JSON object containing "score" (number) and "feedback" (stri
 IMPORTANT: Follow the voice, tone, and grading style shown in the previous examples.
 `;
 
-        const result = await chat.sendMessage(userMessage);
-        const response = result.response;
+        // Helper function to clean and parse response
+        const cleanAndParse = (responseText: string) => {
+            let cleaned = responseText;
+            // Remove markdown code blocks if present
+            if (cleaned.startsWith('```json')) {
+                cleaned = cleaned.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+            } else if (cleaned.startsWith('```')) {
+                cleaned = cleaned.replace(/^```\s*/, '').replace(/\s*```$/, '');
+            }
+            return JSON.parse(cleaned);
+        };
+
+        let result = await chat.sendMessage(userMessage);
+        let response = result.response;
         let text = response.text();
 
         console.log("Raw Gemini Response:", text);
 
-        // Remove markdown code blocks if present
-        if (text.startsWith('```json')) {
-            text = text.replace(/^```json\s*/, '').replace(/\s*```$/, '');
-        } else if (text.startsWith('```')) {
-            text = text.replace(/^```\s*/, '').replace(/\s*```$/, '');
-        }
+        let parsedResult;
+        let retryAttempted = false;
 
         try {
             // With responseSchema, the text should be valid JSON.
             // We just need a simple parse.
-            const parsedResult = JSON.parse(text);
-            return json(parsedResult);
+            parsedResult = cleanAndParse(text);
         } catch (parseErr: any) {
-            console.error("Failed to parse Gemini response as JSON:", text);
-            return json({ 
-                error: 'Failed to parse grading result', 
-                details: parseErr.message,
-                rawResponse: text 
-            }, { status: 500 });
+            console.warn("Initial parse failed, attempting retry...", parseErr.message);
+            
+            // Retry once with a completion request
+            retryAttempted = true;
+            const retryResult = await chat.sendMessage("The previous response was incomplete. Please provide the complete JSON response with both score and feedback fields.");
+            const retryResponse = retryResult.response;
+            text = retryResponse.text();
+            
+            console.log("Retry Gemini Response:", text);
+            
+            try {
+                parsedResult = cleanAndParse(text);
+            } catch (retryErr: any) {
+                console.error("Retry also failed to parse Gemini response as JSON:", text);
+                return json({ 
+                    error: 'Failed to parse grading result', 
+                    details: retryErr.message,
+                    rawResponse: text,
+                    retryAttempted: true
+                }, { status: 500 });
+            }
         }
+
+        return json(parsedResult);
 
     } catch (err: any) {
         console.error("Error grading essay:", err);
