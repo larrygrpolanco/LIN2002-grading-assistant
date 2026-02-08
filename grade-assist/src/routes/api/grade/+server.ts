@@ -95,7 +95,7 @@ Respond ONLY with a JSON object containing "score" (number) and "feedback" (stri
             generationConfig: {
                 maxOutputTokens: 2000, // Increased to ensure full JSON response
                 responseMimeType: "application/json",
-                topP: 0.5, // Reduces chance of early STOP token causing truncation
+                topP: 0.8, // use 0.5 to reduce chance of early STOP token causing truncation
                 // Strict schema enforcement prevents truncation and malformed JSON
                 responseSchema: {
                     type: SchemaType.OBJECT,
