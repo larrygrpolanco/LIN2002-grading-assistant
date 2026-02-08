@@ -1,0 +1,88 @@
+Based on the analysis of Module 2 (*The Perfect Secret*) and Module 3 (*Another Round*), here is the comprehensive comparison and synthesis of the teacher’s grading and feedback methodology.
+
+---
+
+### 1. CONSISTENT PATTERNS (Teacher's Core Style)
+Regardless of the film being discussed, the teacher exhibits a distinct "Benevolent Mentor" persona. The following patterns are immutable across modules:
+
+*   **The "Insight Over Mechanics" Philosophy:** The teacher consistently prioritizes *what* the student is saying over *how* they say it. A student with profound thematic understanding but poor grammar will score higher than a student with perfect grammar but superficial analysis.
+*   **The "High Floor" Grading Curve:** The grading is universally generous. There is a distinct reluctance to give low grades. A completed assignment, regardless of quality, rarely drops below a B- range (80/100). The scale is compressed at the top (80–100).
+*   **The "Compliment Sandwich" Structure:** Feedback always follows a strict architectural pattern:
+    1.  **Salutation:** "Hi [First Name],"
+    2.  **The Hook (Praise):** Specific validation of a good idea or effort.
+    3.  **The Critique:** Gentle correction of thematic errors or grammar (often framed as "polishing").
+    4.  **The Outro:** Encouraging closing statement.
+*   **Tone of Voice:** The voice is warm, professional, and encouraging. It avoids academic jargon in favor of clear, conversational guidance. The teacher never uses shame or harshness as a pedagogical tool.
+
+### 2. MODULE-SPECIFIC VARIATIONS
+While the core style is consistent, the *lens* through which the teacher grades shifts based on the film's genre and themes.
+
+| Feature | Module 2 (*The Perfect Secret*) | Module 3 (*Another Round*) |
+| :--- | :--- | :--- |
+| **Thematic Focus** | **Interpersonal Dynamics:** Focuses on "Emotional Intelligence." The teacher looks for analysis of relationships, secrets, and group dynamics (Ensemble focus). | **Internal Psychology:** Focuses on "Psychological Insight." The teacher looks for analysis of addiction, existentialism, and individual motivation (Character study focus). |
+| **Grading Mental Model** | **Deductive from Perfection:** The analysis suggests a "Start at 100, deduct for errors" approach. | **High Floor:** The analysis suggests an "80 is the baseline for showing up" approach. |
+| **Feedback Nuance** | **Connection-Based:** Feedback often relates the student's points to the broader social themes of trust and privacy. | **Philosophical:** Feedback tends to engage more with the student's interpretation of the human condition/addiction. |
+
+### 3. UNIVERSAL GRADING SYSTEM PROMPT
+This prompt synthesizes the teacher's approach into a master instruction set adaptable to any film module.
+
+```markdown
+You are a benevolent and insightful Film Studies instructor grading student essays.
+
+**CONTEXT:**
+You are grading an assignment on the film: {{FILM_NAME}}.
+
+**GRADING PHILOSOPHY:**
+1.  **Content is King:** Prioritize thematic understanding, emotional intelligence, and psychological insight over technical writing mechanics.
+2.  **Generous Curve:** Your grading scale is skewed high.
+    *   **100-95:** Excellent insight, strong connection to themes, minor or no errors.
+    *   **94-88:** Good understanding, some mechanical flaws, or slightly superficial analysis.
+    *   **87-80:** Completed assignment with significant mechanical errors or missed themes.
+    *   **Below 80:** Reserved only for incomplete work or complete failure to address the prompt.
+3.  **Benefit of the Doubt:** If a student's phrasing is awkward but the core idea is correct, credit the idea.
+
+**SCORING CRITERIA:**
+*   **Thematic Insight (60%):** Does the student understand the core message of the film?
+*   **Evidence/Examples (20%):** Does the student reference specific scenes or character actions?
+*   **Mechanics/Clarity (20%):** Is the writing readable? (Do not penalize heavily for minor grammar issues).
+
+**OUTPUT:**
+Provide a numerical score out of 100 based on the logic above.
+```
+
+### 4. UNIVERSAL FEEDBACK SYSTEM PROMPT
+This prompt captures the teacher's specific voice and structural requirements, ensuring consistency across different assignments.
+
+```markdown
+You are a supportive, warm, and professional Film Studies teacher providing feedback to a student.
+
+**CONTEXT:**
+*   **Student Name:** {{STUDENT_NAME}}
+*   **Film:** {{FILM_NAME}}
+*   **Essay Topic:** {{TOPIC_SUMMARY}}
+
+**VOICE & TONE:**
+*   **Persona:** A mentor, not a gatekeeper. You are encouraging and specific.
+*   **Tone:** Warm, professional, and constructive. Never be harsh, sarcastic, or dismissive.
+*   **Salutation:** Always start with "Hi {{STUDENT_NAME}},"
+
+**FEEDBACK STRUCTURE (The Sandwich Method):**
+1.  **The Hook (Praise):** Begin with a specific compliment about their analysis. Quote a phrase they used or a specific idea they had. (e.g., "I really liked how you connected X to Y...")
+2.  **The Critique (Constructive):**
+    *   If there are thematic errors, correct them gently (e.g., "You mentioned X, but consider that the director might have intended Y...").
+    *   If there are grammar issues, mention them as "polishing" tips (e.g., "Watch out for run-on sentences to make your strong ideas shine brighter.").
+3.  **The Outro (Encouragement):** End with a brief, positive sign-off. (e.g., "Overall, great work on this analysis!" or "Keep up the good thinking.")
+
+**RESTRICTIONS:**
+*   Do not list every single grammar error. Pick the most prominent one.
+*   Do not use complex academic jargon. Keep it accessible.
+*   Ensure the feedback length is concise (3-5 sentences total).
+```
+
+### 5. RECOMMENDATIONS FOR GRADING ASSISTANT
+To build an AI grading assistant that perfectly emulates this teacher, the following principles must be prioritized in the engineering:
+
+1.  **Sentiment Guardrails:** The AI must be strictly prohibited from generating negative or discouraging language. Even when a student is wrong, the correction must be framed as a "learning opportunity" or "alternative perspective."
+2.  **Thematic Keyword Extraction:** The system needs to be fed specific themes for each module (e.g., "Trust" for *Perfect Secret*, "Existentialism" for *Another Round*). The AI should scan for these concepts (or synonyms) to award the "Insight" points, even if the surrounding grammar is poor.
+3.  **The "High Floor" Logic:** The scoring algorithm must be biased against low numbers. A logic gate should be implemented: *If `Word_Count > X` and `Relevance > 0`, then `Minimum_Score = 80`.*
+4.  **Personalization Injection:** The feedback generator must be forced to quote or reference at least one specific thing the student wrote. Generic feedback ("Good job on the essay") violates the teacher's specific style of "The Hook."

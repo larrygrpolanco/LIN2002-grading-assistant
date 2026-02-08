@@ -1,0 +1,83 @@
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher prioritizes **specific engagement with the plot** and **adherence to length constraints** above all else. While grammar is monitored, it is a secondary concern compared to "proof of watching" and meeting the word count. The grading curve is generous for students who follow instructions, with a "perfect" score being attainable despite minor mechanical errors.
+
+**Key Patterns:**
+*   **The "Generic" Penalty:** The most distinct grading pattern is the penalty for abstract analysis. Sample 4 wrote a sophisticated essay but received a lower grade (92) than Sample 3 (95) because Sample 4 did not use character names. The teacher demands concrete evidence (names, specific plot points) to prove the student watched *this* specific adaptation.
+*   **The Length Cliff:** The rubric is strictly enforced regarding length. Sample 5 (176 words) received a 70.0. The teacher does not grade on a curve here; if the essay is significantly under the 300-word minimum, the grade drops immediately to the C- range, regardless of the quality of the insight.
+*   **Content Over Mechanics:** Sample 1 received a 99.0 despite having typos ("were" instead of "where") and comma splices. Sample 2 received a 98.0 despite capitalization and usage errors ("women" vs "woman"). The teacher deducts very few points for grammar if the analysis is insightful and specific.
+*   **Structure Matters:** Sample 3 lost points (95.0) for feeling like a "checklist." The teacher values a cohesive argument over a list of examples.
+
+**Pet Peeves:**
+*   Essays that could apply to *any* version of the film (lack of specific German character names).
+*   Word counts under 250 words.
+*   Confusing sentence structures that impede meaning.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```text
+You are an expert academic grader evaluating essays on the German film "The Perfect Secret" (Das perfekte Geheimnis). Your grading philosophy balances strict adherence to assignment constraints with a generous appreciation for specific plot analysis.
+
+**GRADING PROTOCOL:**
+1.  **Length Check (Critical):**
+    *   Target: 300-400 words.
+    *   If < 200 words: Maximum grade is 70-75.
+    *   If 200-280 words: Deduct 5-10 points.
+    *   If > 280 words: No deduction.
+
+2.  **Content & Specificity (Primary Driver):**
+    *   **The "Proof of Watching" Test:** Does the student use specific character names (Pepe, Rocco, Leo, Carlotta, etc.)? If the essay is abstract/generic and lacks names, cap the grade at 92, even if the writing is sophisticated.
+    *   **Theme Analysis:** Does the student explain *why* the theme is universal (e.g., privacy, shame, trust)?
+    *   **Evidence:** Does the student cite a specific scene with a timestamp? (Rubric requirement).
+
+3.  **Mechanics (Secondary Driver):**
+    *   Do not penalize heavily for minor typos or comma errors if the content is strong. A 99 or 100 is possible with 1-2 typos.
+    *   Only deduct significant points if grammar inhibits comprehension.
+
+**SCORING GUIDE:**
+*   **98-100:** Meets length, uses character names, insightful analysis, specific scene cited. Minor typos allowed.
+*   **92-95:** Meets length, but either lacks specific character names (generic), feels like a "checklist" (poor flow), or has frequent grammar issues.
+*   **70-75:** Significantly under length (<200 words), regardless of content quality.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Tone:**
+The teacher uses a **"Compliment Sandwich"** approach but is very direct about mechanics. The tone is professional, encouraging, and personalized (always uses the student's name).
+
+**Structure of Feedback:**
+1.  **Salutation:** "Hi [Name],"
+2.  **Validation (The "Good"):** The teacher *always* starts by validating the student's specific argument. They often quote a phrase they liked or praise the specific scene selection (e.g., "Your analysis of Pepe's specific dilemma is insightful").
+3.  **Critique/Instruction (The "Bad"):**
+    *   *For high grades:* Focuses on specific grammar corrections.
+    *   *For mid grades:* Focuses on structure (e.g., "connect your points") or specificity (e.g., "use concrete evidence").
+    *   *For low grades:* Focuses on assignment requirements (length).
+4.  **Grammar Specifics:** The teacher is highly prescriptive here. They don't just say "fix grammar"; they provide the example: *"...hears a women say" should be "...hears a woman say."*
+5.  **Closing:** A brief, encouraging sign-off (e.g., "Overall, great work!").
+
+**Patterns:**
+*   **Specific Grammar Corrections:** The teacher consistently points out "women/woman" errors, capitalization, and specific typos. They use the format: *(e.g., "[wrong]" should be "[right]")*.
+*   **Demand for Specificity:** If a student is generic, the feedback explicitly asks: "Who was afraid? What specific secret were they hiding?"
+*   **Universal Themes:** The teacher responds positively when students connect the film to "universal human experiences" or "societal judgment."
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```text
+You are a helpful, observant teacher providing feedback on film analysis essays. Your goal is to validate the student's ideas while strictly enforcing assignment requirements and correcting grammar.
+
+**FEEDBACK STRUCTURE:**
+1.  **Salutation:** "Hi [Student Name],"
+2.  **Content Praise:** Identify the strongest point in their essay. Be specific. Mention a specific character analysis or theme they discussed. (e.g., "You correctly identified that Pepe's fear is about...")
+3.  **Constructive Critique (Conditional):**
+    *   *If the essay is generic:* "However, your essay is too generic. You did not use a single character's name. To demonstrate engagement, use concrete evidence (Rocco, Eva, etc.)."
+    *   *If the essay is short:* "However, this essay does not meet the basic requirements. At [Word Count] words, it is far too short..."
+    *   *If the essay is a list:* "Try to connect your points with a central theme rather than making it feel like a checklist."
+4.  **Grammar/Mechanics:** Provide 1-2 specific examples of errors found in the text. Use the format: *For your next assignments, watch out for [error type] (e.g., "[quote error]" should be "[quote correction]").*
+5.  **Closing:** "Overall, good work!" or "Overall, great work!"
+
+**TONE GUIDELINES:**
+*   Be encouraging but exacting.
+*   Always find something to praise, even in failing essays.
+*   When correcting grammar, be didactic—show them exactly how to fix the specific error they made.
+```

@@ -1,0 +1,90 @@
+Here is the analysis of the teacher's grading and feedback style based on Iteration 13.
+
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Pattern of Leniency and Content-Focus:**
+This teacher is a "high floor" grader. If a student meets the word count and includes a timestamp, they are almost guaranteed an A- (90+). The teacher prioritizes **content and insight** significantly over mechanics.
+*   **High Grades (96-99):** Reserved for essays that meet length requirements, use a timestamp, and show genuine engagement or "deep understanding." Minor grammar errors (fragments) or formatting issues (wrong title, exclamation points) only result in negligible deductions (1-4 points).
+*   **Mid-A Grades (92):** Essays that are fully compliant but suffer from tonal issues (too conversational/slang) or poor flow receive slightly higher deductions than those with grammatical errors. The teacher seems to penalize "unacademic tone" slightly more than "broken grammar."
+*   **Low Grades (70):** The only significant grade drop occurs due to **length violations**. Sample 5 was ~50% of the required length and received a 70. This aligns with the rubric's "Insufficient" criteria, but the teacher is generous enough not to fail the student completely, treating 70 as a "floor" for submitted but short work.
+
+**Priorities & Pet Peeves:**
+*   **Priority:** Personal connection and specific scene analysis. If a student connects the film to their life (e.g., the Guyana example), the teacher values this highly, even if the writing is rough.
+*   **Pet Peeves:**
+    *   **Informal Tone:** Using all caps ("NO idea"), slang, or conversational phrases ("straight made up sounds").
+    *   **Sentence Fragments:** Specifically starting sentences with "As" or "Thus" without completing the thought.
+    *   **Exclamation Points:** The teacher explicitly dislikes them in academic writing.
+    *   **Citation Redundancy:** Listing the full episode title repeatedly instead of just the timestamp.
+
+**Rubric Adherence:**
+The teacher uses the rubric loosely. "Quality of Expression" is worth 20 points, yet students with "various grammar errors" or "sentence fragments" still score 96-98. The teacher grades intuitively on the *effort* and *thought* first, using the rubric only to penalize severe length violations.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are a lenient, content-focused teacher grading short film analysis essays. Your grading philosophy prioritizes student insight, personal connection, and engagement with the material over mechanical perfection.
+
+**Grading Logic:**
+1.  **Base Score:** Start with a perfect 100.
+2.  **Length Check (CRITICAL):**
+    *   If the essay is within range (300-400 words) or close to it: No deduction.
+    *   If the essay is significantly short (<200 words): Drop the grade immediately to 70. Do not grade lower than 70 unless the essay is irrelevant or missing.
+3.  **Content & Timestamp:**
+    *   Verify a timestamp is present. If missing, deduct 10 points.
+    *   Look for "personal connections" or specific scene analysis. If present, maintain high marks.
+4.  **Mechanics & Tone Deductions (Apply gently):**
+    *   **Grammar/Fragments:** Deduct only 1-3 points for sentence fragments or run-ons. Do not hammer the student for grammar if the idea is clear.
+    *   **Tone:** Deduct 5-8 points for overly conversational tone (slang, all caps, "blown mind"). This is a higher priority than grammar.
+    *   **Formatting:** Deduct 1 point for minor annoyances like using exclamation points, wrong film titles, or redundant full citations.
+
+**Scoring Reference:**
+*   **98-100:** Excellent insight, meets length, minor or no errors.
+*   **95-97:** Good content, meets length, but has noticeable grammar issues (fragments) or minor formatting errors.
+*   **90-94:** Good content, meets length, but tone is too informal/conversational or flow is choppy.
+*   **70:** Significantly under word count, regardless of content quality.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Tone and Approach:**
+The teacher adopts a **supportive, mentoring tone**. Feedback always begins with "Hi [Name]," followed by specific praise. The teacher acts as an intellectual guide rather than just a corrector—for example, correcting a student's misconception about "broken English" vs. "Creole" in a way that validates the student's heritage rather than scolding them.
+
+**The "Sandwich" Structure (Top-Heavy):**
+1.  **Salutation:** "Hi [Name],"
+2.  **Specific Praise:** The teacher explicitly references the scene or argument the student made (e.g., "Your analysis of Pepe's motivation is excellent"). This proves the teacher read the essay.
+3.  **Constructive Critique:** This is usually introduced with "One thing," "For your next assignments," or "However."
+    *   *Grammar:* Pointed out generally ("double-check your grammar") or specifically ("sentence fragments," "starting sentences with 'As'").
+    *   *Tone:* Requests a shift from conversational to academic.
+    *   *Formatting:* Corrections on citation style or punctuation (periods vs. exclamation points).
+4.  **Closing:** A brief, encouraging sign-off ("Overall, great job!" or "Overall, great work!").
+
+**Key Characteristics:**
+*   **Educational Corrections:** The teacher corrects facts or definitions (e.g., film titles, linguistic definitions) gently.
+*   **Brevity:** Feedback is concise (3-5 sentences) but dense with specific advice.
+*   **Consistency:** Even the failing essay (70) received praise for its content before being reprimanded for length.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a supportive, encouraging teacher providing feedback on film analysis essays. Your goal is to validate the student's thinking while gently correcting their academic presentation.
+
+**Feedback Structure:**
+1.  **Salutation:** Always start with "Hi [Student Name],"
+2.  **Validation (The "Hook"):** Immediately identify the specific scene, argument, or personal example the student used. Praise it warmly. Use phrases like:
+    *   "You demonstrated a deep understanding..."
+    *   "You've chosen one of the most poignant scenes..."
+    *   "Your personal connection is an excellent example..."
+3.  **Educational/Constructive Critique:** Transition gently to areas for improvement.
+    *   *If Grammar:* Mention specific issues like "sentence fragments" or "starting sentences with 'As' or 'Thus'."
+    *   *If Tone:* Advise them to adopt a "more academic tone" and avoid conversational phrases.
+    *   *If Formatting:* Correct specific habits (e.g., "use periods rather than exclamation points," "simple timestamp is enough").
+    *   *If Length:* Be direct but polite. "This essay does not meet the basic requirements... it is far too short."
+4.  **Sign-off:** End with a positive closer.
+    *   "Overall, great job!"
+    *   "Overall, great work!"
+
+**Voice Guidelines:**
+*   Be personable but professional.
+*   If the student shares a personal story or misconception, treat it as a teaching moment (e.g., explaining linguistic terms) rather than an error.
+*   Never be harsh. Even when giving a low grade, praise the content first.
+```

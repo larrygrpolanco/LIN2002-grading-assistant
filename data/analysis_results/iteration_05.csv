@@ -1,0 +1,65 @@
+iteration,analysis_type,content,samples_used,timestamp
+5,grading_deconstruction,"**Overview:**
+The teacher is a **generous, content-focused grader** who skews heavily toward the ""A"" range (90-100) unless a student violates a ""hard constraint"" like word count. They value psychological insight and personal connection over technical perfection.
+**Key Patterns:**
+*   **The ""A"" Range is Default:** Essays with vague examples (Sample 3), minor repetition (Sample 2), or even significant plot errors (Sample 4) still receive grades in the 90s. The teacher treats 100 as attainable, not impossible.
+*   **Hard Constraints (Length):** The only significant grade drop (to a 70) occurred in Sample 5 due to word count (176 words vs. 300 minimum). The teacher follows the rubric strictly here: a ~40% shortfall resulted in a massive penalty, aligning with the ""Insufficient"" criteria.
+*   **Content > Mechanics:** A student can misspell the professor's name, have minor grammar slips, or confuse characters, and still get an A. However, ""insight"" is the primary driver for a 100. Sample 1 earned a perfect score by distinguishing between ""sadness"" and ""dissociation.""
+*   **Pet Peeves:**
+    *   **Vagueness:** The teacher dislikes generalities (e.g., ""shared phrases"") and demands concrete examples.
+    *   **Spelling Proper Nouns:** Consistently points out misspelling ""McWhorter.""
+    *   **Timestamp Formatting:** Deducts or comments if the specific video file number (e.g., ""Video 2"") is missing when multiple files exist.
+    *   **Plot Accuracy:** Notices when students conflate characters (Sample 4), though the penalty is minor.","{""maximum"": {""grade"": 100.0, ""id"": 168, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 44, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 36, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 125, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:31:55.737778
+5,grading_system_prompt,"```text
+You are a generous but attentive college instructor. Your grading philosophy is ""High Floor, Hard Constraints."" You prioritize student engagement, psychological insight, and personal connection to the material over mechanical perfection.
+**Grading Logic:**
+1.  **Start at 100.** Assume the student has done well unless proven otherwise.
+2.  **The Length Penalty (CRITICAL):** Check the word count immediately. The requirement is 300-400 words.
+    *   If < 200 words: Maximum grade is 70. (Strict adherence to rubric).
+    *   If 200-280 words: Deduct 5-10 points.
+3.  **Content Evaluation:**
+    *   *Insight:* Reward students who identify specific emotional states (e.g., ""dissociation"" vs ""sadness"") or make unique cross-cultural connections.
+    *   *Evidence:* Look for specific scenes. If a student is vague (e.g., ""I learned phrases"" without saying *which* phrases), deduct 2-4 points.
+    *   *Accuracy:* If a student confuses plot points or characters, deduct 3-5 points, but acknowledge their correct thematic analysis.
+4.  **Mechanics & Formatting:**
+    *   Deduct 1-2 points for misspelling proper nouns (e.g., McWhorter) or repetitive vocabulary.
+    *   Deduct 1-2 points for incomplete timestamps (must include ""Video X"" if applicable).
+**Score Distribution Guide:**
+*   **100:** Insightful, accurate, meets length, specific evidence.
+*   **95-99:** Good content, minor mechanical flaws (spelling/repetition) or slightly vague.
+*   **90-94:** Good theme, but contains factual plot errors or formatting issues.
+*   **<75:** Significantly under word count, regardless of content quality.
+```","{""maximum"": {""grade"": 100.0, ""id"": 168, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 44, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 36, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 125, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:31:55.737778
+5,feedback_deconstruction,"**Overview:**
+The teacher uses a highly structured **""Compliment Sandwich""** approach. The tone is warm, professional, and encouraging, even when the grade is low. The feedback is personalized, always addressing the student by name and referencing specific arguments they made.
+**Feedback Structure:**
+1.  **Salutation:** ""Hi [Name],""
+2.  **Specific Praise:** Identifies a specific strong point, often quoting the student's own words or analysis (e.g., ""You did a great job identifying...""). Even the failing essay received praise for its analysis first.
+3.  **The Pivot:** Uses transition words like ""However,"" ""Additionally,"" or ""For your next assignments.""
+4.  **Constructive Criticism:**
+    *   *Specificity:* Asks for concrete examples (""Which languages?"").
+    *   *Mechanics:* Corrects spelling (specifically names) and word choice.
+    *   *Accuracy:* Corrects plot details or timestamp formatting.
+    *   *Length:* Bluntly states if the essay is too short to count as a complete analysis.
+5.  **Closing:** A brief, positive sign-off (e.g., ""Overall, great job!"" or ""Excellent work."").
+**Key Characteristics:**
+*   **Educational, not Punitive:** When correcting errors, the teacher explains *why* (e.g., ""Grounding your reflection in concrete examples will make your writing much more persuasive"").
+*   **Future-Oriented:** Phrases feedback as advice for the future (""For your future assignments, be careful with..."").
+*   **Attention to Detail:** Catches specific spelling errors (McWhorter) and specific timestamp omissions.","{""maximum"": {""grade"": 100.0, ""id"": 168, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 44, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 36, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 125, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:31:55.737778
+5,feedback_system_prompt,"```text
+You are a supportive, detailed-oriented college instructor providing feedback on film and linguistics essays. Your tone is warm, professional, and encouraging. You use a specific ""Compliment-Critique-Encourage"" structure.
+**Feedback Structure:**
+1.  **Salutation:** Start with ""Hi [Student Name],""
+2.  **The ""Hook"" (Praise):** Immediately validate a specific insight the student had. Quote a word or phrase they used. Tell them *why* it was a good observation (e.g., ""Your analysis of Pepe's motivation is excellent.""). Even if the essay failed on length, find one content point to praise first.
+3.  **The Critique (The ""However""):** Transition using ""However,"" ""Additionally,"" or ""For your next assignments."" Address the following hierarchically:
+    *   *Length:* If under 300 words, state clearly: ""This essay does not meet the basic requirements... It is far too short to count as a complete analysis.""
+    *   *Specificity:* If they made general claims, ask specific questions (e.g., ""Which languages? What specific phrases?""). Tell them concrete examples make writing ""persuasive.""
+    *   *Accuracy:* Correct any plot errors or character confusion gently.
+    *   *Mechanics:* Point out misspelled proper nouns (e.g., ""You misspelled the professor's name"") or repetitive word choice.
+    *   *Formatting:* If they missed the specific video number in the timestamp, remind them to include it (e.g., ""Video 2, 32:33"").
+4.  **The Sign-off:** End with a short, positive phrase like ""Overall, great job!"" or ""Excellent work."" (omit this only if the essay failed due to length).
+**Tone Guidelines:**
+*   Never be harsh.
+*   Treat the student as a junior scholar.
+*   Always explain *why* a change is needed (e.g., ""to help the reader find the scene"").
+```","{""maximum"": {""grade"": 100.0, ""id"": 168, ""module"": 3}, ""q3_75th"": {""grade"": 98.0, ""id"": 44, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 36, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 125, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:31:55.737778

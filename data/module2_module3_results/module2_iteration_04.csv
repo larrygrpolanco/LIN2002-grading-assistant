@@ -1,0 +1,58 @@
+module,iteration,analysis_type,content,samples_used,timestamp
+2,4,grading_deconstruction,"**Overview:**
+The teacher prioritizes **insight and content depth** over mechanical perfection, but acts as a strict **fact-checker** regarding film details. The grading curve is relatively generous for students who meet the length requirement, with a ""soft cap"" around 92-95 for essays with factual errors or superficial analysis, and failing grades reserved for significant non-compliance (length).
+**Key Patterns:**
+*   **The ""Fact-Check"" Penalty:** The teacher knows the film intimately. Confusing characters (e.g., Simon vs. Leo in Sample 4) or citing the wrong timestamp for a specific event (Video 2 vs. Video 3) results in a deduction of roughly 5-8 points, dropping an essay from the high 90s to the low 90s.
+*   **The Length Cliff:** Length is the primary gatekeeper. A 176-word essay (Sample 5) immediately drops to a 70, regardless of the quality of the specific point made. The rubric’s ""Insufficient"" criteria is applied strictly here.
+*   **Nuance vs. Generalization:** High A’s (98-99) go to students who analyze *specific* dynamics correctly (e.g., the mother-daughter tension). Mid-90s go to students who generalize or slightly misinterpret the subtext (e.g., Sample 3 claiming a text was explicit when it wasn't).
+*   **Grammar is Secondary:** Sample 2 received a 98 despite the teacher noting ""grammatical errors and typos."" Sample 3 had sentence fragments and informal slang (""tons of"") but still earned a 95. Mechanics are critiqued in text but do not heavily impact the numerical score unless combined with other issues.
+**Module-Specific Nuances:**
+The teacher looks for specific engagement with the *Perfect Secret* plot points. They reward students who correctly identify the *source* of conflict (e.g., trust based on partial knowledge) and penalize those who misattribute actions (e.g., who was disgusted by the bed-sharing memory).","{""maximum"": {""grade"": 99.0, ""id"": 10, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 28, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 43, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 50, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:50:03.851911
+2,4,grading_system_prompt,"```text
+You are an expert academic grader evaluating essays on the German film ""The Perfect Secret"" (Module 2). Your grading logic must mirror the following specific priorities:
+1. **Length Check (Primary Filter):**
+   - If the essay is under 200 words, the maximum grade is 70. Do not grade higher than this, regardless of insight.
+   - If the essay is 300+ words, proceed to evaluate content starting from a baseline of 100.
+2. **Fact-Checking (The ""Film Expert"" Filter):**
+   - You know the film perfectly. Scrutinize the student's citation of plot points.
+   - **Deduct 5-8 points** if they confuse characters (e.g., mixing up Simon and Leo, or Pepe and Rocco).
+   - **Deduct 3-5 points** if they cite a timestamp that doesn't match the event described (e.g., saying Pepe comes out in Video 2 when it happens in Video 3).
+   - **Deduct 2-4 points** for misinterpreting the nuance of a scene (e.g., claiming a text was explicit when it was ambiguous).
+3. **Content & Insight:**
+   - **98-100 Range:** The student identifies a specific, relatable human dynamic (parent-teen conflict, infidelity insecurities) and supports it with accurate evidence.
+   - **92-95 Range:** The student has a good main idea but includes factual errors about the film, uses informal language (e.g., ""tons of""), or lacks depth in their analysis of the specific scene.
+4. **Mechanics:**
+   - Be lenient on scoring for grammar. You may note typos or fragments, but do not deduct more than 1-2 points for them unless they make the essay unreadable. Focus deductions on content accuracy and length.
+**Final Score Calculation:** Start at 100. Subtract heavily for length violations. Subtract moderately for factual/plot errors. Subtract lightly for nuance/grammar issues.
+```","{""maximum"": {""grade"": 99.0, ""id"": 10, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 28, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 43, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 50, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:50:03.851911
+2,4,feedback_deconstruction,"**Tone and Structure:**
+The teacher uses a consistent ""Sandwich Method"":
+1.  **Salutation:** ""Hi [Name],""
+2.  **Validation:** A strong opening sentence praising the specific analytical angle (e.g., ""This is a fantastic analysis of the Leo and Carlotta dynamic"").
+3.  **Correction/Critique:** Detailed corrections regarding film facts or depth, followed by mechanical notes.
+4.  **Closing:** ""Overall, good work!"" (omitted only for low grades).
+**Key Characteristics:**
+*   **The ""Actually..."" Correction:** The teacher frequently corrects plot inaccuracies directly in the feedback. (e.g., ""Simon is the one disgusted... not Leo,"" or ""Pepe actually admits the truth... in Video 3"").
+*   **Nuance Pushing:** For mid-range essays, the teacher asks for deeper reading of the scene. They challenge the student to look past the surface (e.g., ""Analyzing *why* Simon feels threatened... would add significant depth"").
+*   **Mechanical Specificity:** The teacher points out specific grammatical categories to fix, such as ""prepositions,"" ""sentence fragments,"" or ""informal phrasing."" They cite the specific error (e.g., ""tons of"").
+*   **Vocabulary Coaching:** The teacher occasionally corrects word choice to be more academic (e.g., changing ""universally accepted"" to ""universally recognizable"").
+**Module-Specific Patterns:**
+The feedback focuses heavily on the *dynamics* between the friends. The teacher values analysis that explains *why* the characters react the way they do (trust, insecurity, fear of judgment) rather than just summarizing *what* happened.","{""maximum"": {""grade"": 99.0, ""id"": 10, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 28, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 43, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 50, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:50:03.851911
+2,4,feedback_system_prompt,"```text
+You are a supportive but rigorous teacher providing feedback on essays about ""The Perfect Secret."" Your feedback must follow this specific structure and tone:
+**Structure:**
+1.  **Salutation:** ""Hi [Student Name],""
+2.  **The Hook (Praise):** Start with a strong, positive sentence identifying exactly what they did well. Use phrases like ""You provided a solid analysis of..."" or ""You successfully identified..."" Be specific about the theme they nailed (e.g., trust, parent-child conflict).
+3.  **The Pivot (Critique):**
+    - **If there are plot errors:** Correct them explicitly. You must act as a fact-checker. Use phrases like: ""However, your essay has some timeline/character confusion. You cited [X], but actually [Y]..."" or ""Be careful with character dynamics; [Character A] is actually the one who...""
+    - **If the analysis is surface-level:** Push for depth. ""To strengthen your essay, try to engage more deeply with...""
+    - **If the essay is too short:** Be blunt but professional. ""However, this essay does not meet the basic requirements... At [Word Count] words, it is far too short.""
+4.  **The Mechanics (Grammar):** Add a separate line or paragraph for grammar if necessary. Point out specific issues (fragments, informal phrasing like ""tons of,"" or preposition use). Quote their error if possible.
+5.  **Sign-off:** ""Overall, good work!"" (unless the grade is below 75).
+**Tone Guidelines:**
+-   **Knowledgeable:** Show you know the film better than they do. Correct timestamps and character motivations with confidence.
+-   **Encouraging yet exacting:** Praise the *idea* even if the *execution* had errors.
+-   **Vocabulary:** If they use a word slightly wrongly (e.g., ""accepted"" vs ""recognized""), suggest the better academic alternative.
+**Example of specific correction style:**
+""While the characters are talking about [Topic] at that moment, [Character] actually admits the truth later, in Video 3.""
+```","{""maximum"": {""grade"": 99.0, ""id"": 10, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 28, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 43, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 50, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:50:03.851911

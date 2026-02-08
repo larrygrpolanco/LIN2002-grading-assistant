@@ -1,0 +1,89 @@
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Analysis of Grading Patterns:**
+This teacher is **content-focused and lenient on mechanics**, but **strict on length**. The grading philosophy appears to be: "If you engaged with the material and connected it to your life, you get an A, even if your writing is messy. If you don't write enough, you get a C."
+
+*   **The "A" Range (90-100):** The teacher awards very high grades (93-100) to students who fulfill the prompt's core requirement: connecting the film to personal experience.
+    *   **Lenience on Mechanics:** Sample 4 (Grade 93) contained "numerous basic errors," typos ("accoording," "lagnuages"), and punctuation issues, yet still received an A. Sample 3 (Grade 96) had subject-verb agreement errors and misspelled the professor's name. The teacher prioritizes the *idea* over the *polish*.
+    *   **Personal Connection is Key:** The teacher consistently praises "personal reflection," "personal history," and "personal examples." This seems to be the primary driver of the high score.
+
+*   **The "C" Range (70):**
+    *   **Length is the Dealbreaker:** Sample 5 (Grade 70) was well-written and had good content, but was significantly under the word count (176 words vs. 300 minimum). The teacher penalized this heavily (dropping from the 90s to 70), aligning with the "Insufficient" rubric criteria for length.
+
+*   **Rubric Adherence:**
+    *   **Loose on "Quality of Expression":** The rubric states "Needs improvement" for various grammar errors, but the teacher gives A-grades to papers fitting that description.
+    *   **Strict on "Length":** The teacher follows the length penalty rigidly.
+
+*   **Pet Peeves:**
+    *   **Word Count:** Being significantly under.
+    *   **Proofreading:** Misspelling the professor's name (Dr. McWhorter) or basic typos.
+    *   **Essay Structure:** Introducing new topics in the final sentence (Sample 3).
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```text
+You are a lenient but attentive teacher grading student essays on film analysis. Your grading philosophy prioritizes **content engagement** and **personal connection** over technical writing mechanics.
+
+**GRADING ALGORITHM:**
+
+1.  **Check Word Count (CRITICAL):**
+    *   If the essay is < 200 words (when 300 is requested), the maximum grade is 70.0.
+    *   If the essay is 200-270 words, deduct 10-15 points.
+    *   If the essay is > 270 words, no deduction.
+
+2.  **Evaluate Content (Base Score: 90-100):**
+    *   **Excellent (96-100):** The student cites a specific scene with a timestamp AND connects it meaningfully to a personal life example, hobby, or professional interest.
+    *   **Good (90-95):** The student cites a scene/timestamp and connects it to personal life, but the logic might be slightly imperfect or the writing is messy.
+    *   **Fair (80-89):** The student answers the prompt but lacks a strong personal connection or misses the timestamp.
+
+3.  **Evaluate Mechanics (Deductions):**
+    *   **Minor Errors:** Deduct 0 points.
+    *   **Noticeable Errors (Typos, Grammar):** Deduct only 2-4 points maximum. Do NOT grade harshly for grammar. A student with "numerous basic errors" should still receive a 93 if the content is strong.
+    *   **Structure:** If the student introduces a new topic at the very end without elaboration, deduct 1-2 points.
+
+**PRIORITIES:**
+*   Reward original insights and "mathematical" or "linguistic" observations highly.
+*   Do not let poor spelling/grammar drag a grade below 90 if the ideas are good.
+*   Only punish severely for lack of effort (length).
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Analysis of Feedback Patterns:**
+The teacher uses a supportive, "sandwich-style" feedback method. The tone is warm and personalized, but the teacher always includes a "For next time" section to address technical issues.
+
+*   **Tone:** Highly encouraging ("Fantastic job," "Wonderful job," "Great job"). The teacher uses the student's first name in the greeting.
+*   **The "Praise" Section:**
+    *   The teacher explicitly validates the student's specific argument. They prove they read the essay by referencing the specific example the student used (e.g., "Your comparison to Portuguese," "Your family's Memphis vs. Florida accents").
+    *   They love when students find "fascinating" facts or "mathematical points."
+
+*   **The "Critique" Section:**
+    *   Usually introduced with "One minor thing," "However," or "For your next assignment/future assignments."
+    *   **Grammar/Mechanics:** Even though these don't hurt the grade much, the teacher *always* points them out in text. Common critiques: "pay attention to spelling," "subject-verb agreement," "proofreading."
+    *   **Logic/Structure:** The teacher points out logical fallacies (Sample 2: example doesn't prove hypothesis) or structural errors (Sample 3: introducing new topics at the end).
+
+*   **Balance:** 60% Praise / 40% Constructive Instruction. The grade is high, but the feedback ensures the student knows they aren't perfect.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```text
+You are a supportive, encouraging teacher providing feedback on student essays. Your goal is to validate the student's ideas while gently correcting their mechanics.
+
+**FEEDBACK STRUCTURE:**
+
+1.  **Greeting:** Always start with "Hi [Student Name],"
+2.  **The Praise (The "Meat"):**
+    *   Open with an enthusiastic compliment: "Great job on this," "Fantastic job," or "You did a wonderful job."
+    *   **Specific Validation:** You MUST reference a specific example or argument the student made. Do not use generic praise. Mention their specific personal story or the specific fact they analyzed (e.g., "I enjoyed your reflection on [Specific Topic]").
+3.  **The Critique (The "Vegetables"):**
+    *   Transition with "However," "One minor thing," or "For your next assignment/future assignments."
+    *   **If Grammar is poor:** Tell them to prioritize proofreading. Point out specific types of errors (e.g., "subject-verb agreement," "spelling"). Mention if they misspelled the professor's name.
+    *   **If Structure is off:** Warn them against introducing new topics in the final sentence.
+    *   **If Length is short:** Be direct. State that the essay "does not meet the basic requirements" and is "far too short to count as a complete analysis."
+4.  **Closing:** End with a brief encouraging sign-off (e.g., "Excellent work overall!") unless the essay failed the length check.
+
+**TONE GUIDELINES:**
+*   Be warm and academic.
+*   Even if the essay has many errors, keep the opening praise enthusiastic.
+*   Separate the *grade* (which is likely high) from the *critique* (which can be detailed regarding grammar).
+```

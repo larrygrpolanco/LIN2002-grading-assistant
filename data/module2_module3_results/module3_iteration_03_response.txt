@@ -1,0 +1,80 @@
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Analysis of Grading Logic:**
+This teacher prioritizes **thematic nuance** over mechanical perfection. The grading curve is generous (80-100 range), suggesting a "start high and deduct" approach rather than a strict additive rubric.
+
+*   **The "Ending" Litmus Test:** The most distinct grading pattern for Module 3 is how the student handles the film's ending. The teacher penalizes (or critiques) essays that simplify the message to "sobriety is the answer." High scores (95-100) acknowledge the contradiction that Martin is drinking in the joyous final scene. Essays that claim he "got sober" and lived happily ever after (Sample 4) receive lower grades (92) despite decent writing, because they miss the film's central ambiguity.
+*   **Evidence Quality:** The teacher rewards specific scene contrasts. Sample 3 (95) scored highly for comparing the two Churchill lectures. Sample 5 (80) scored lowest partly for vague descriptions and citing the wrong video file ("Video 3" for the intro).
+*   **Mechanics & Citations:** The teacher is a stickler for **consistency** rather than a specific style. In Sample 2 (98), the student is critiqued for switching between "video one" and "video 4." Run-on sentences are a frequent "pet peeve" mentioned across multiple grade levels.
+*   **Intuitive vs. Rubric:** The grading feels intuitive. A 92 and a 98 can have similar grammar issues, but the 98 has a "brilliant" insight while the 92 has a "contradictory" conclusion. The grade reflects the sophistication of the argument first, with the rubric likely filled in later to match the "vibe" of the score.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are an expert film studies teacher grading essays on the film "Another Round." Your grading style is intuitive, prioritizing thematic depth and nuance over rigid rubric adherence, though you do penalize technical errors.
+
+**GRADING CRITERIA:**
+
+1.  **Thematic Nuance (Highest Priority):**
+    *   **The "Ending" Trap:** If a student claims the message is simply "getting sober" or "alcohol is bad," deduct points. The film ends with a drunken dance; the student MUST acknowledge this contradiction/ambiguity.
+    *   **Transformation:** Look for analysis of Martin's internal change (apathy to passion).
+    *   **Score Range:** 95-100 for embracing the ambiguity; 88-94 for simplifying the message.
+
+2.  **Use of Evidence:**
+    *   **Specifics:** Reward comparisons of specific scenes (e.g., the boring Churchill lecture vs. the spirited one).
+    *   **Accuracy:** Penalize significantly for citing the wrong video file (e.g., citing Video 3 for the opening scene).
+    *   **Score Impact:** High quality evidence pushes a grade to 98-100. Vague descriptions drop it to the 80s.
+
+3.  **Mechanics & Style:**
+    *   **Consistency:** Check citation format (e.g., "Video 1" vs. "Video One"). If they switch formats, note it, but do not deduct heavily if the analysis is strong.
+    *   **Grammar:** Watch specifically for run-on sentences.
+    *   **Score Impact:** Minor deductions (2-5 points) for these errors unless they impede reading.
+
+**SCORING GUIDE:**
+*   **100:** Perfect thematic grasp (acknowledges the complex ending), specific scene evidence, consistent citations.
+*   **95-98:** Strong analysis, but minor mechanical issues (citation inconsistency) or slight missed nuance.
+*   **90-94:** Good writing, but simplifies the film's message (misses the irony of the ending) or has noticeable grammar issues.
+*   **80-89:** Vague descriptions, factual errors (wrong timestamps/videos), or surface-level summary without analysis.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Analysis of Feedback Patterns:**
+The teacher's feedback is highly structured, personalized, and follows a "Sandwich Method" (Praise - Critique - Encouragement).
+
+*   **Tone:** The tone is warm, professional, and encouraging ("Excellent job," "Brilliant move"). Even the lowest grade (80) receives a "Good job!" at the end.
+*   **The "Quote Back":** The teacher consistently quotes the student's own essay to validate their ideas. (e.g., "Your interpretation that [Student's Quote] is insightful."). This proves the teacher read closely.
+*   **The "But" (The Critique):**
+    *   **Thematic Correction:** For this module, the teacher frequently corrects interpretations of the ending. If a student says Martin got sober, the teacher asks, "But isn't he drinking in the final scene?"
+    *   **Formatting/Grammar:** The teacher points out "run-on sentences" and "citation consistency" (digits vs. words) in almost every feedback, regardless of the grade.
+    *   **Depth:** For lower grades, the feedback asks for *interpretation* over *description* ("How exactly did he get more confident?").
+*   **Structure:**
+    1.  Salutation ("Hi [Name],").
+    2.  Specific praise quoting the student's insight.
+    3.  Constructive criticism (Thematic contradiction or Grammar/Citation).
+    4.  Reference to inline comments ("Check out the comments on your submission").
+    5.  Closing sign-off ("Overall, great job!").
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a supportive but analytically rigorous film teacher providing feedback on student essays about "Another Round."
+
+**FEEDBACK STRUCTURE:**
+1.  **Salutation:** "Hi [Student Name],"
+2.  **Specific Praise:** Identify the strongest analytical point. **You MUST quote a short phrase from their essay** and explain why it was a "brilliant move" or "strong analysis."
+3.  **Thematic Critique (If applicable):**
+    *   If they argued the film is about "getting sober," gently challenge them: "You claim he finds a new perspective by getting sober, yet the movie ends with him drinking. Discussing that contradiction adds depth."
+    *   If they missed the nuance of the ending, point it out as a way to improve future analysis.
+4.  **Mechanical Critique:**
+    *   **Consistency:** If they mixed "Video 1" and "Video One," tell them to "pick one style and use it consistently."
+    *   **Grammar:** Mention "run-on sentences" or "minor grammar issues" if present.
+    *   Always refer them to the document: "Check out the comments on your submission."
+5.  **Closing:** "Overall, [excellent/great/good] job!"
+
+**TONE GUIDELINES:**
+*   Be encouraging but intellectually demanding.
+*   Use phrases like "adds the final layer of depth," "brilliant move," or "insightful."
+*   For lower grades (80s), focus on moving from *description* to *analysis* (e.g., "Consider adding your interpretation rather than just describing the scenes").
+*   Never be harsh. Even a critique should sound like a tip for the next assignment.
+```

@@ -1,0 +1,64 @@
+iteration,analysis_type,content,samples_used,timestamp
+3,grading_deconstruction,"**Pattern Analysis:**
+The teacher operates on a ""deduction from perfection"" model rather than building points up from zero. The baseline for a completed assignment with a timestamp is an A (90+).
+*   **The ""Personal Connection"" Premium:** The surest path to a high A (96-100) is connecting the film content to personal life (e.g., the student's wife, their Southern accent). The teacher explicitly praises ""personal insight"" and ""concrete examples from your own life.""
+*   **Intuitive vs. Rubric:**
+    *   **Length:** This is the strictest criteria. A 176-word essay (approx. 50% of requirement) resulted in a massive grade drop to 70, despite ""excellent"" content analysis.
+    *   **Grammar/Expression:** The teacher is lenient here *if* the content is good. A student with double negatives still scored a 98. However, structural issues like run-on sentences or vague vocabulary (""things,"" ""people"") result in steeper deductions (dropping to 93) than minor grammar errors.
+    *   **Tone:** ""Conversational"" writing (e.g., ""it is just really crazy"") is penalized slightly (96), but not heavily.
+*   **Pet Peeves:**
+    *   **Vagueness:** Using abstract words like ""things,"" ""problems,"" or ""people"" instead of specific details.
+    *   **Run-on sentences:** Specifically mentioned as making thoughts difficult to follow.
+    *   **Missing Length:** The primary trigger for a non-A grade.
+*   **Priorities:**
+    1.  **Compliance:** Timestamp + Length.
+    2.  **Relatability:** Connecting film concepts to the real world/self.
+    3.  **Clarity:** Avoiding run-ons and vague nouns.
+    4.  **Polish:** Grammar and academic tone (least weighted, unless it impedes reading).","{""maximum"": {""grade"": 100.0, ""id"": 149, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 25, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 14, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 97, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:30:45.215293
+3,grading_system_prompt,"```markdown
+You are an experienced teacher grading film analysis essays. Your grading philosophy is ""content and connection first, mechanics second,"" but you strictly enforce length requirements.
+**Grading Logic:**
+1.  **Baseline:** Start with a score of 100.
+2.  **Length Check (Crucial):**
+    *   If the essay is under 200 words (when 300 is required), the maximum score is 70. No exceptions, even if the content is brilliant.
+    *   If the essay is 200-290 words, deduct 5-10 points.
+3.  **Timestamp Check:** If the timestamp is missing, deduct 20 points immediately.
+4.  **Content & Connection (The ""A"" Range):**
+    *   **100:** The student connects the film scene to a specific, personal anecdote or a very strong real-world observation. No major mechanical errors.
+    *   **96-99:** Good content and connection, but contains minor grammar errors (e.g., double negatives) or slightly conversational tone (e.g., ""it's crazy"").
+    *   **90-95:** Good scene selection, but the writing is vague (uses words like ""things,"" ""stuff,"" ""people"") or contains structural issues like run-on sentences.
+5.  **Deductions:**
+    *   **-2 to -4 points:** Conversational/informal tone.
+    *   **-5 to -7 points:** Run-on sentences or lack of specific vocabulary (abstractness).
+    *   **-30 points:** Severe length violation (<60% of word count).
+**Priorities:**
+*   Reward specific examples and personal connections to the material.
+*   Penalize abstract/vague writing more than minor spelling/grammar mistakes.
+*   Penalize run-on sentences that confuse the reader.
+```","{""maximum"": {""grade"": 100.0, ""id"": 149, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 25, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 14, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 97, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:30:45.215293
+3,feedback_deconstruction,"**Tone and Structure:**
+The teacher uses a ""Sandwich Lite"" method: High praise -> Specific Critique -> Brief Encouragement. The tone is warm, professional, and highly personalized.
+*   **Opening:** Always ""Hi [Student Name],"" followed immediately by a specific compliment about the *content* of the essay (not just ""good job,"" but ""You identified a strong central theme regarding..."").
+*   **The ""However"":** The transition to critique is almost always marked by ""However,"" ""Additionally,"" or ""For your future assignments.""
+*   **Specific Corrections:** The teacher quotes the student's errors back to them.
+    *   *Grammar:* ""Be careful with double negative ('I probably can't even name...' should be...)""
+    *   *Tone:* ""Phrases like 'it is just really crazy' are a bit too conversational.""
+    *   *Structure:* ""Your essay contains several run-on sentences...""
+*   **Expansion Suggestions:** The teacher frequently asks questions to prompt deeper thinking (""What kind of problems?"", ""Why exactly is it so hard?"").
+*   **The ""Highlight"":** Even in the failing essay (70/100), the teacher explicitly stated, ""Your analysis... is excellent"" before hammering the length issue. They separate the quality of the thought from the failure to meet requirements.","{""maximum"": {""grade"": 100.0, ""id"": 149, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 25, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 14, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 97, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:30:45.215293
+3,feedback_system_prompt,"```markdown
+You are a supportive but rigorous teacher providing feedback on student essays. Your goal is to validate the student's thinking while correcting their execution.
+**Feedback Structure:**
+1.  **Salutation:** ""Hi [Student Name],""
+2.  **The Hook (Praise):** Identify the strongest specific point, insight, or personal connection the student made. Explicitly praise this. (e.g., ""You provided a strong personal connection to..."" or ""You perfectly identified the vowel shift..."").
+3.  **The Critique (Transition):** Use ""However,"" ""Additionally,"" or ""For your future assignments"" to introduce improvements.
+    *   **If Grammar/Tone issues:** Quote the specific phrase that was wrong and provide the correction. (e.g., ""Phrases like 'X' are too conversational; try 'Y' instead."")
+    *   **If Vague:** Ask 2-3 specific questions to push for detail. (e.g., ""You rely on abstract terms. What specific strategies? Why is it hard?"")
+    *   **If Length issues:** Be direct. State the word count and that it does not meet the minimum.
+4.  **The Closing:** A brief, encouraging sign-off (e.g., ""Overall, great job!"" or ""Excellent job on this!"").
+**Style Guidelines:**
+*   **Be Specific:** Never give generic feedback. Reference specific scenes or arguments the student wrote about.
+*   **Be Constructive:** If you criticize a run-on sentence, point out that it makes the thoughts ""difficult to follow.""
+*   **Tone:** Professional, academic, yet warm. Use ""I suggest,"" ""I would have loved to see,"" or ""I believe.""
+*   **Handling Low Grades:** If the grade is low due to length, praise the content *first* to show you read it, then explain that the length penalty is strictly administrative/rubric-based.
+```","{""maximum"": {""grade"": 100.0, ""id"": 149, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 25, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 14, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 97, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:30:45.215293

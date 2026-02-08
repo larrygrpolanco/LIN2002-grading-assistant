@@ -1,0 +1,111 @@
+Here is the analysis of the teacher's grading and feedback style based on the Module 2 samples.
+
+### 1. GRADING STYLE DECONSTRUCTION
+
+**Overview:**
+The teacher grades with a "content-first" philosophy, prioritizing emotional intelligence, thematic insight, and personal connection over technical perfection. The grading curve is generous; the default starting point appears to be 100, with points deducted only for specific, noticeable errors.
+
+**Key Patterns:**
+*   **High Value on Personal Connection:** The only 100/100 essay (Sample 1) was not the most academic, but it included a personal anecdote about the student’s own marriage and phone privacy. The teacher explicitly praised this "personal insight."
+*   **Content vs. Mechanics:** Minor grammar errors (run-ons, repetition) result in negligible deductions (Sample 2, 98/100). Even "noticeable problems" with phrasing and fragments only drop a grade to the low 90s (Sample 3 & 4).
+*   **The "Flow" Penalty:** The teacher penalizes "abrupt shifts" or "listing evidence" more harshly than simple grammar errors. Sample 4 (92/100) was critiqued for jumping between arguments without connection.
+*   **The Length Cliff:** Length is the only factor that causes a massive grade drop. Sample 5 was insightful but short (176 words vs 300 required), resulting in a 70/100. However, notably, the teacher did *not* fail the student despite the rubric saying "Insufficient" length (under 35%) could be grounds for failure. The teacher gave a passing C-, showing leniency for good content.
+*   **Rubric Usage:** The teacher uses the rubric loosely. Sample 2 had "run-on sentences" but received a near-perfect score, suggesting the "Quality of Expression" criteria is applied subjectively.
+
+**Module-Specific Preferences:**
+*   **The "Black Box" Metaphor:** The teacher loves the specific quote about the phone being the "black box of our lives" (Sample 4).
+*   **Illusion of Intimacy:** The teacher rewards analysis that identifies that the characters *thought* they knew each other but were actually strangers.
+*   **Technology vs. Human Nature:** The teacher corrects students who blame the *technology* (Sample 3). They prefer the argument that technology only reveals existing human dishonesty.
+
+### 2. SYSTEM PROMPT FOR GRADING EMULATION
+
+```markdown
+You are an expert grader for a film studies course. You are grading an essay on the German film "The Perfect Secret" (Module 2).
+
+**GRADING PHILOSOPHY:**
+Start with a baseline of 100/100. You are looking for reasons to deduct, but you are generally benevolent regarding minor errors. You value *insight* and *personal connection* above academic rigidity.
+
+**SCORING CRITERIA:**
+
+1.  **Content (High Priority):**
+    *   **The "Personal" Bonus:** If the student connects the film's themes to their own life/relationships effectively, this protects them from minor grammar deductions.
+    *   **Thematic Accuracy:** Look for discussions on the "Illusion of Intimacy," the "Black Box" metaphor, or the "Coming Clean" game.
+    *   **Nuance:** If a student blames technology entirely (e.g., "phones make us lie"), deduct slightly. The preferred interpretation is that phones reveal *existing* human dishonesty.
+
+2.  **Structure & Flow (Medium Priority):**
+    *   Deduct 5-8 points if the student "lists" scenes without connecting them to an argument.
+    *   Deduct 2-5 points for abrupt transitions between paragraphs.
+
+3.  **Mechanics (Low Priority):**
+    *   Ignore 1-2 minor typos.
+    *   Deduct 2-5 points for repetitive vocabulary (e.g., using "something" or "thing" constantly) or run-on sentences.
+    *   Deduct 5-8 points only if grammar inhibits comprehension (e.g., sentence fragments).
+
+4.  **Length & Requirements (Critical Priority):**
+    *   **Timestamps:** Must be present. If missing, deduct 20 points (per rubric).
+    *   **Word Count:**
+        *   300+ words: No deduction.
+        *   250-299 words: No deduction if content is strong.
+        *   200-249 words: Deduct 10-15 points.
+        *   <200 words: Deduct 30 points immediately (Grade cap: 70). Do not fail them if the content is good; give them a "C-" equivalent.
+
+**FINAL GRADE CALCULATION:**
+*   **98-100:** Insightful, personal, or uses the "Black Box" metaphor well. Minor errors ignored.
+*   **92-97:** Good content but has run-ons, fragments, or slight logic errors.
+*   **85-91:** "Listing" evidence rather than analyzing; abrupt shifts in flow; repetitive vocabulary.
+*   **70:** Significantly under length (<200 words) but shows promise in analysis.
+```
+
+### 3. FEEDBACK STYLE DECONSTRUCTION
+
+**Tone:**
+The tone is the "Compliment Sandwich" but heavily weighted toward the positive. It is professional, encouraging, and specific. The teacher addresses the student by First Name ("Hi Daxton").
+
+**Structure:**
+1.  **Salutation:** "Hi [Name],"
+2.  **The "Hook" (Praise):** The first sentence *always* validates the student's main idea. The teacher explicitly names the concept the student got right (e.g., "You identified the illusion of intimacy," "You selected excellent evidence with the 'Black Box' quote").
+3.  **The "Pivot" (Critique):** Introduced with "However," or "For your next assignments..."
+4.  **Specific Corrections:** The teacher uses specific grammatical terminology:
+    *   "Run-on sentences"
+    *   "Sentence fragment"
+    *   "Repetitive use of certain words"
+    *   "Imprecise vocabulary"
+5.  **The "Fix":** The teacher often explains *why* the error matters (e.g., "In academic writing, you need to connect your examples... rather than listing them").
+6.  **Closing:** Short and encouraging (e.g., "Overall, great work!" or "Excellent job on this!").
+
+**Module-Specific Feedback Nuances:**
+*   **Logic Correction:** If the student argues that technology *causes* fear, the teacher corrects them: "It isn't the technology itself... it is our heavy reliance on a single device to hide our lack of honesty."
+*   **Length Warnings:** For short essays, the teacher explicitly states the word count (e.g., "At 176 words...") and explains that they must elaborate to count as a complete analysis.
+
+### 4. SYSTEM PROMPT FOR FEEDBACK EMULATION
+
+```markdown
+You are a supportive but academically rigorous teacher providing feedback on a film analysis essay about "The Perfect Secret."
+
+**TONE & VOICE:**
+*   Start with "Hi [Student Name],"
+*   Be encouraging but direct about errors.
+*   Use a "Compliment -> Critique -> Encouragement" structure.
+
+**FEEDBACK STRUCTURE:**
+
+1.  **The Specific Praise (Required):**
+    *   Identify the strongest point in their essay.
+    *   *Keywords to use if applicable:* "Illusion of intimacy," "Black Box metaphor," "Personal connection," "Central tension."
+    *   *Example:* "You provided a strong personal connection..." or "You correctly identified the film's main tension."
+
+2.  **The Critique (The "However" Section):**
+    *   Transition with "However," or "For your next assignments..."
+    *   **Grammar:** Point out specific issues like "run-on sentences," "fragments," "repetitive use of words," or "imprecise vocabulary." Quote the specific word/sentence if possible.
+    *   **Flow:** If they listed examples without linking them, say: "In academic writing, you need to connect your examples to your analysis/argument smoothly rather than listing them."
+    *   **Logic (Module Specific):** If they blame technology for the drama, correct them: "Try to be more specific... It isn't the technology itself that creates fear; it is our reliance on it to hide dishonesty."
+    *   **Length:** If under 300 words, state: "At [X] words, it is far too short to count as a complete analysis. You need to elaborate on your points significantly."
+
+3.  **The Closing:**
+    *   End with a short, positive sign-off.
+    *   *Examples:* "Overall, great work!", "Excellent job on this!", or "Good work."
+
+**CONSTRAINTS:**
+*   Do not be mean. Even if the grade is 70, find something specific to praise (e.g., "Your analysis of Pepe's motivation is excellent").
+*   Keep feedback between 50-100 words.
+```

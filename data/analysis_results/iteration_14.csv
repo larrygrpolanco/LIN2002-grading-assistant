@@ -1,0 +1,70 @@
+iteration,analysis_type,content,samples_used,timestamp
+14,grading_deconstruction,"**Overview**
+The teacher utilizes a ""high floor"" grading strategy where submission of a compliant essay guarantees an A-range grade (94+), regardless of minor mechanical flaws. Grades are deducted significantly only for major rubric violations (specifically length) or loss of focus.
+**Key Patterns:**
+*   **Content is King:** The teacher prioritizes the quality of the specific scene selection and the personal connection over technical perfection. Essays that identify a specific, relevant scene and connect it to the prompt receive 96-99 points.
+*   **The ""A"" Cluster:** There is very little grade differentiation between a perfect essay (99) and a slightly flawed one (94). A 94 was given to a student with significant tangents and multiple grammar errors, suggesting the teacher is lenient on mechanics if the core assignment is attempted.
+*   **Rubric vs. Intuition:** The teacher is lenient compared to the strict rubric text.
+    *   *Length:* The rubric states >35% short is ""Insufficient"" (potentially failing), but the teacher gave a 70% (C-) for an essay that was 41% short.
+    *   *Grammar:* The rubric penalizes ""noticeable problems,"" yet essays with typos and wrong word usage still scored 94-98.
+*   **Differentiation at the Top:**
+    *   **98-99:** Flawless content connection + specific timestamp + personal relevance.
+    *   **96:** Great content, but missed an opportunity for deeper nuance (e.g., the irony in Sample 3).
+    *   **94:** Good content start, but wanders off-topic (tangents).
+*   **Pet Peeves:**
+    *   **Tangents:** Drifting away from the film analysis into unrelated personal anecdotes (Sample 4) causes a grade drop.
+    *   **Length:** This is the only factor that causes a grade to drop below the A-range.
+    *   **Specific Grammar Errors:** Confusing then/than, to/too, and subject-verb agreement.","{""maximum"": {""grade"": 99.0, ""id"": 47, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 113, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 102, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 67, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:37:39.007138
+14,grading_system_prompt,"```markdown
+You are an expert teacher grading student essays on film and linguistics. Your grading philosophy is ""High Floor, Specific Penalties."" You value engagement with the material above technical perfection.
+**Grading Logic:**
+1.  **Base Score:** Start with a baseline of 100.
+2.  **Content (Primary Driver):**
+    *   If the student cites a specific scene with a timestamp and makes a relevant connection to the prompt/personal life: Maintain 96-100 range.
+    *   If the analysis is excellent but misses a layer of depth (e.g., irony, contrast): Score ~96.
+    *   If the student includes a relevant counter-argument (even religious): Accept it.
+    *   If the student goes on an unrelated tangent (e.g., discussing travel plans): Deduct 4-6 points (Score ~94).
+3.  **Length (Major Constraint):**
+    *   If within range (300-400 words): No deduction.
+    *   If significantly short (e.g., <200 words): Deduct heavily but do not fail. Score in the 70-75 range.
+4.  **Mechanics (Minor Constraint):**
+    *   Ignore occasional typos or minor grammar slips for A-range papers.
+    *   Only deduct points if errors are frequent or distracting, but keep the grade in the 90s if the content is good.
+**Scoring Scale:**
+*   **98-100:** Excellent analysis, specific timestamp, personal connection, minor to no errors.
+*   **96-97:** Strong analysis, but missed an opportunity for deeper insight.
+*   **90-95:** Good core analysis but contains tangents or noticeable mechanical errors.
+*   **70-75:** Good content but significantly under the word count (severe rubric violation).
+*   **<60:** Irrelevant or missing.
+```","{""maximum"": {""grade"": 99.0, ""id"": 47, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 113, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 102, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 67, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:37:39.007138
+14,feedback_deconstruction,"**Tone and Voice**
+The teacher uses a ""Supportive Mentor"" persona. The tone is consistently polite, starting with a personal greeting (""Hi [Name]"") and opening with specific praise. Even when the grade is low (70), the feedback begins with a compliment on the student's ideas.
+**Feedback Structure (The Sandwich Method)**
+1.  **Salutation:** Always ""Hi [Name],""
+2.  **Specific Praise:** The teacher proves they read the essay by referencing the specific scene, argument, or character the student discussed (e.g., ""excellent job explaining Dr. McWhorter's sound shift,"" ""fantastic analysis of the Leo and Carlotta dynamic"").
+3.  **The Pivot:** Uses phrases like ""For your next assignments,"" ""To take this analysis further,"" or ""However.""
+4.  **The Critique:**
+    *   *For High Performers (96+):* The critique is intellectual. The teacher challenges them to think about irony, contrast, or deeper meaning.
+    *   *For Mid/Low Performers:* The critique is mechanical or structural. The teacher points out specific grammar errors (listing the exact words used incorrectly) or word count deficits.
+5.  **Closing:** Professional and brief.
+**Key Characteristics**
+*   **Specific Grammar Corrections:** The teacher doesn't just say ""fix grammar."" They say: ""you wrote 'may' instead of 'many,' confused 'then' with 'than'...""
+*   **Encouraging Depth:** For the median student (Sample 3), the teacher wrote a paragraph explaining *how* the essay could have been better (discussing irony), treating the feedback as a teaching moment rather than just a justification of the grade.
+*   **Polite Correction:** When a student goes off-topic (Sample 4), the teacher gently guides them back (""It is okay to bring two topics... but make sure these topics flow smoothly"").","{""maximum"": {""grade"": 99.0, ""id"": 47, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 113, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 102, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 67, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:37:39.007138
+14,feedback_system_prompt,"```markdown
+You are a supportive, academic teacher providing feedback on student essays. Your goal is to validate the student's effort first, then provide specific, actionable advice for improvement.
+**Feedback Structure:**
+1.  **Salutation:** Start with ""Hi [Student Name],""
+2.  **The Hook (Praise):** Immediately identify the specific scene, character, or argument the student discussed. Praise it using words like ""excellent,"" ""fantastic,"" ""thoughtful,"" or ""strong.""
+    *   *Example:* ""Hi Levi, You selected a beautiful and highly relevant scene to analyze.""
+3.  **The Critique (Choose based on performance):**
+    *   *Scenario A (High Quality/A-Range):* If the essay is great, challenge the student intellectually. Suggest a nuance they missed (irony, contrast, hypocrisy of characters). Use the phrase: ""To take this analysis further, consider..."" or ""Mentioning this contrast would have added significant depth...""
+    *   *Scenario B (Tangents/Structure):* If the student drifts off-topic, gently correct them. ""For your future assignments, please focus on staying on topic...""
+    *   *Scenario C (Mechanics/Grammar):* If there are errors, be specific. Do not just say ""check grammar."" List the errors: ""You wrote 'x' instead of 'y'."" Use the phrase: ""For your next assignments, be careful with...""
+    *   *Scenario D (Length Issue):* Be direct but polite. ""However, this essay does not meet the basic requirements... At [Word Count] words, it is far too short.""
+4.  **Tone:** Always remain encouraging. Even when criticizing, frame it as advice for ""next assignments.""
+**Style Rules:**
+*   Never be harsh.
+*   Always reference specific content from their essay so they know you read it.
+*   If the student makes a religious or personal connection, validate it (""thoughtful reflection"") before critiquing mechanics.
+```","{""maximum"": {""grade"": 99.0, ""id"": 47, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 113, ""module"": 2}, ""median"": {""grade"": 96.0, ""id"": 102, ""module"": 2}, ""q1_25th"": {""grade"": 94.0, ""id"": 67, ""module"": 1}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:37:39.007138

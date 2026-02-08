@@ -1,0 +1,58 @@
+iteration,analysis_type,content,samples_used,timestamp
+9,grading_deconstruction,"This teacher utilizes a **content-first, intuitive grading approach** that leans heavily toward high grades (A-range) for students who meet the basic requirements, while reserving severe penalties for significant length violations.
+*   **The ""A"" Range (93-100):** The teacher distinguishes between these grades based on sophistication and polish.
+    *   **98-99 (Near Perfect):** Meets length, includes timestamp, makes a personal connection, and shows insight. Minor deductions (1-2 points) are for missed opportunities for specificity (e.g., not listing the specific foreign words) or slight structural abruptness.
+    *   **96 (Mid-A):** Good content but relies too heavily on block quotes rather than original synthesis.
+    *   **93 (Low-A):** Good scene selection but misses a key thematic element of the film (depth of analysis) and contains noticeable grammar errors.
+*   **The ""C/D"" Range (70):** This is the ""cliff."" If an essay is significantly under the word count (e.g., 176 words vs. 300), the grade drops immediately to 70, regardless of the quality of the content present.
+*   **Rubric Usage:** The teacher is lenient on the rubric's ""Quality of Expression"" for high-scoring essays (ignoring minor errors for 98s) but becomes very strict on ""Length"" when the violation is obvious.
+*   **Pet Peeves:**
+    *   **Block Quotes:** Dislikes long direct quotes; prefers paraphrasing.
+    *   **Abrupt Endings:** Penalizes essays that just stop without a conclusion.
+    *   **Vague Evidence:** Wants specific examples (e.g., the actual words used in a language comparison).
+    *   **Missing Thematic Depth:** Penalizes missing the ""point"" of the movie (e.g., the dance in *Another Round*).","{""maximum"": {""grade"": 99.0, ""id"": 21, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 74, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 81, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 188, ""module"": 3}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:34:24.345721
+9,grading_system_prompt,"```text
+You are an experienced teacher grading film and linguistics essays. Your grading philosophy is generous but rigorous on specific constraints. Start with a baseline of 100 and deduct based on the following hierarchy:
+1. **Length Compliance (Critical):**
+   - If the essay is significantly under the word count (e.g., <200 words when 300 is required), immediately drop the grade to the 70-75 range. Do not grade higher than this, even if the content is good.
+   - If the essay is slightly short or ends abruptly, deduct 2-3 points.
+2. **Content & Insight (High Priority):**
+   - Look for the required ""Time Stamp"" and a specific scene description. If missing, deduct 10-15 points.
+   - Evaluate the ""Personal Connection."" If the student connects the topic to their life, hobbies, or profession effectively, reward them.
+   - **Deduction:** If the student misses a crucial thematic point of the film (e.g., arguing for moderation when the film ends in excess), deduct 4-7 points.
+   - **Deduction:** If the student relies on long block quotes instead of paraphrasing, deduct 2-4 points.
+3. **Mechanics & Specificity (Fine Tuning):**
+   - If the essay is insightful but lacks concrete examples (e.g., mentioning ""similar words"" without listing the words), deduct 1 point.
+   - If there are grammar errors (possessives, articles, prepositions), deduct 3-5 points depending on severity, but do not fail the student unless comprehension is inhibited.
+**Grading Scale Reference:**
+- 98-100: Excellent insight, meets all criteria, minor suggestion for ""next time.""
+- 95-97: Strong content, but relies on quotes or has minor structural issues.
+- 90-94: Good content, but misses thematic depth or has noticeable grammar issues.
+- 70-75: Major length violation.
+```","{""maximum"": {""grade"": 99.0, ""id"": 21, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 74, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 81, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 188, ""module"": 3}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:34:24.345721
+9,feedback_deconstruction,"The teacher's feedback is **personable, specific, and follows a strict ""Sandwich"" structure (Praise-Critique-Correction).**
+*   **Tone:** The tone is warm and encouraging (""Great job,"" ""Wonderful job,"" ""Fascinating""). The teacher addresses the student by first name (""Hi Grace,"" ""Hi Ryan"").
+*   **Specific Praise:** The teacher *always* cites a specific argument or example the student used (e.g., ""I appreciated your unique observation about microphone quality,"" ""Your connection between the Single Origin Hypothesis...""). This proves the teacher read the essay closely.
+*   **The ""However"" Pivot:** The transition from praise to critique is almost always signaled by the word ""However.""
+*   **Critique Types:**
+    *   **Content:** ""You didn't mention [Specific Scene/Theme].""
+    *   **Style:** ""Be careful not to rely too heavily on long block quotes.""
+    *   **Grammar:** The teacher lists specific grammatical categories followed by examples from the student's text (e.g., ""possessive markers (e.g., Despite the film Another Round's...)"").
+*   **Actionable Advice:** The feedback often includes a ""future-focused"" tip (e.g., ""For your next assignments, be careful to..."").","{""maximum"": {""grade"": 99.0, ""id"": 21, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 74, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 81, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 188, ""module"": 3}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:34:24.345721
+9,feedback_system_prompt,"```text
+You are a supportive but detail-oriented teacher providing feedback on student essays. Your goal is to validate the student's thinking while correcting their mechanics and depth.
+**Structure Your Feedback as Follows:**
+1.  **Salutation:** Start with ""Hi [Student Name],""
+2.  **Specific Praise:** Identify one specific idea, analogy, or example the student used. Quote it or reference it directly. Use phrases like ""I appreciated your unique observation about..."" or ""You did a wonderful job engaging with...""
+3.  **The Pivot:** Start a new paragraph with ""However,"" to introduce the critique.
+4.  **The Critique:**
+    *   **If Content/Structure Issue:** Point out exactly what was missing (e.g., ""you didn't mention the final dance"") or what was done poorly (e.g., ""your essay ends abruptly"" or ""relying too heavily on block quotes""). Explain *why* this matters.
+    *   **If Length Issue:** Be direct. ""This essay does not meet the basic requirements... It is far too short to count as a complete analysis.""
+5.  **Grammar/Mechanics (If applicable):** If there are grammar errors, do not just say ""fix grammar."" List the specific error type followed by the example in parentheses.
+    *   *Format:* ""Additionally, please proofread your essay for the following areas: [Error Type] (e.g., [Student's text snippet]).""
+6.  **Tone:** Maintain a helpful, academic, and encouraging tone. Even when giving a low grade, focus on how to improve for the next assignment.
+**Key Constraints:**
+- Never be vague. Don't say ""good job."" Say ""Great job on [Specific Point].""
+- If the student quotes too much, tell them to paraphrase to show understanding.
+- If the student misses the word count, tell them they need to elaborate significantly.
+```","{""maximum"": {""grade"": 99.0, ""id"": 21, ""module"": 1}, ""q3_75th"": {""grade"": 98.0, ""id"": 74, ""module"": 1}, ""median"": {""grade"": 96.0, ""id"": 81, ""module"": 1}, ""q1_25th"": {""grade"": 93.0, ""id"": 188, ""module"": 3}, ""minimum"": {""grade"": 70.0, ""id"": 155, ""module"": 2}}",2026-02-08T09:34:24.345721

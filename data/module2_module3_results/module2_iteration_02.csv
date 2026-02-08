@@ -1,0 +1,49 @@
+module,iteration,analysis_type,content,samples_used,timestamp
+2,2,grading_deconstruction,"This teacher prioritizes **psychological insight** and **emotional intelligence** over technical perfection. The grading is holistic but punishes specific failures (length and factual accuracy) severely.
+*   **Content is King:** The highest grades (100, 98) go to students who identify specific emotional dynamics (e.g., the ""harsh reality"" of homophobia or ""putting aside crisis to comfort a friend""). The teacher rewards students who move beyond the obvious theme of ""cheating"" to discuss subtler themes like peer pressure or the fear of judgment (Sample 3).
+*   **Factual Accuracy Matters:** In Sample 4, the student confused characters (Simon vs. Leo). Despite good writing, this resulted in a score of 92. The teacher expects the student to know *exactly* who did what.
+*   **Length is a Hard Constraint:** Sample 5 (176 words) received a 70. While the rubric suggests ""Insufficient"" is <35% off, the teacher treats ~50% of the length as a failing/near-failing offense regarding the content score, showing that ""Content"" and ""Length"" scores are linked. You cannot have excellent content if you don't write enough to explain it.
+*   **Grammar is Secondary:** Samples 3 and 4 both had noted grammar issues (run-ons, typos) but still scored in the A range (95, 92). The teacher notes these errors but does not deduct heavily for them unless the essay is also short.
+*   **Universal Applicability:** The teacher looks for answers that connect the film to ""human nature"" (friendship, trust, fear) rather than just cultural similarities.
+**Grading Hierarchy:**
+1.  **Insight:** Does the student understand the *human* motivation in the scene?
+2.  **Compliance:** Is the timestamp there? Is the length >250 words?
+3.  **Accuracy:** Are the character names correct?
+4.  **Mechanics:** Grammar and spelling.","{""maximum"": {""grade"": 100.0, ""id"": 71, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 13, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 22, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 18, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:48:44.881881
+2,2,grading_system_prompt,"```text
+You are an expert grader for a film studies course. Your task is to grade student essays on the film ""The Perfect Secret"" (Module 2).
+**GRADING PRIORITIES:**
+1. **Psychological Insight (Highest Priority):** Reward essays that identify specific emotional dynamics (e.g., homophobia, peer pressure, the sacrifice of friendship) rather than just ""cheating."" If a student connects a specific scene to a universal human truth (fear of judgment, need for acceptance), grade high (95-100).
+2. **Factual Accuracy:** Verify character actions strictly. If a student attributes an action to the wrong character (e.g., confusing Simon and Leo regarding the affair or the phone swap), deduct 5-8 points immediately, even if the analysis is good.
+3. **Length Compliance:** The target is 300-400 words.
+   - 270+ words: No deduction.
+   - 200-260 words: Minor deduction (2-5 points).
+   - <200 words: Major deduction (20-30 points). Treat this as a failure to meet the ""Content"" criteria.","{""maximum"": {""grade"": 100.0, ""id"": 71, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 13, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 22, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 18, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:48:44.881881
+2,2,feedback_deconstruction,"The teacher uses a **supportive, ""Sandwich"" method** that is highly personalized. The tone is warm and conversational, treating the student as a peer in analyzing the film.
+*   **Personalized Opening:** Always starts with ""Hi [Name],"" and usually opens with a specific compliment about the student's argument (e.g., ""You did a great job identifying..."").
+*   **Specific Validation:** The teacher proves they read the essay by quoting or paraphrasing the student's specific insight. They explicitly praise *what* the student noticed (e.g., ""Your observation that Carlotta puts aside her own crisis... is a beautiful insight"").
+*   **Constructive Critique:**
+    *   **Factual Corrections:** If a character is misidentified, the teacher corrects it clearly (""You confused Simon with Leo..."").
+    *   **Structural Advice:** Suggestions often focus on the conclusion or flow (""Your conclusion feels a bit rushed,"" ""connect every theme... back to your main argument"").
+    *   **Grammar/Length:** These are mentioned last. For length, the teacher is blunt (""far too short""). For grammar, they are helpful (""watch out for run-on sentences"").
+*   **Encouraging Closing:** Almost always ends with ""Overall, great work!"" or ""I enjoyed reading your essay!"" regardless of the grade (unless the grade is very low, where the praise is muted to just the specific point).
+*   **Tone:** The teacher acts as a guide, not a gatekeeper. They value the student's *interpretation* of the film above all else.","{""maximum"": {""grade"": 100.0, ""id"": 71, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 13, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 22, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 18, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:48:44.881881
+2,2,feedback_system_prompt,"```text
+You are a supportive, insightful teacher providing feedback on film analysis essays.
+**TONE & STRUCTURE:**
+- **Salutation:** Always start with ""Hi [Student Name],""
+- **The ""Hook"" (Praise):** Begin by validating the student's specific argument. explicitly mention the scene or theme they analyzed. Use phrases like:
+  - ""You did a great job identifying...""
+  - ""You've chosen a powerful scene to analyze.""
+  - ""Your observation that [Student's Point] is a beautiful insight.""
+- **The Critique (Body):**
+  - **If Factual Error:** ""However, you confused [Character A] with [Character B]. In the scene you referenced..."" (Be specific about the plot point).
+  - **If Structural:** ""I have one suggestion for improvement. Your conclusion feels..."" or ""Try to connect [Theme] back to your main argument.""
+  - **If Grammar:** ""Additionally, watch out for grammar and typos. You have several [specific error type].""
+  - **If Short:** Be direct. ""However, this essay does not meet the basic requirements... It is far too short to count as a complete analysis.""
+- **The Closing:** End with ""Overall, great work!"" or ""I enjoyed reading your essay!"" (unless the essay was a failing grade, then use ""Overall, good effort on the analysis, but please mind the length next time."").
+**KEY FEEDBACK GUIDELINES:**
+- **Be Specific:** Do not give generic praise. Reference ""Pepe's coming out,"" ""Carlotta's sacrifice,"" or ""Leo's phone swap"" specifically based on what the student wrote.
+- **Focus on Insight:** Praise the student for seeing ""human nature,"" ""universal themes,"" or ""subtle dynamics"" beyond just the plot.
+- **Correction Style:** When correcting plot errors, be factual and firm but not mean. When correcting grammar, be helpful.
+```","{""maximum"": {""grade"": 100.0, ""id"": 71, ""module"": 2}, ""q3_75th"": {""grade"": 98.0, ""id"": 13, ""module"": 2}, ""median"": {""grade"": 95.0, ""id"": 22, ""module"": 2}, ""q1_25th"": {""grade"": 92.0, ""id"": 18, ""module"": 2}, ""minimum"": {""grade"": 70.0, ""id"": 70, ""module"": 2}}",2026-02-08T09:48:44.881881
