@@ -1,0 +1,35 @@
+1. Length (10 pts)
+Excellent: Appropriate length (within 10% of the required length).
+
+Needs improvement: Too short or long (by more than 20% of the required word count).
+
+Insufficient: Too short or long (by more than 35% of the required word count).
+
+Failing: Not submitted.
+
+2. Time Stamp (20 pts)
+Excellent: Film scene and time stamp included and convincing as evidence for point.
+
+Needs improvement: Film scene and time stamp included but only marginally convincing as evidence for point.
+
+Insufficient: Film scene included but no time stamp.
+
+Failing: Not submitted or no film scene and time stamp included.
+
+3. Quality of Expression (20 pts)
+Excellent: Good grammar and accurate spelling; appropriate phrasing and style according to academic conventions.
+
+Sufficient: Few grammar and spelling errors; slight mistakes in phrasing and style.
+
+Needs improvement: Various grammar and spelling errors; noticeable problems with proper phrasing and style.
+
+Failing: Not submitted or grammar and spelling errors overwhelm and inhibit comprehension.
+
+4. Content (50 pts)
+Excellent: Excellent points and relevant references; original ideas and excellent insight into topic; opinions corroborated with relevant evidence; no generalizations or unsubstantiated claims; obvious connection to topic/film/culture.
+
+Good to sufficient: Good points and mostly relevant references; some original ideas and insight into topic; opinions mostly corroborated with relevant evidence; very few generalizations and/or unsubstantiated claims; noticeable connection to topic/film/culture.
+
+Needs improvement: Few points and little to no relevant references; lacking original ideas; only superficial insight into topic; opinions corroborated with little to no relevant evidence (unconvincing ideas); some generalizations and/or unsubstantiated claims; certain degree of disconnect to topic/film/culture.
+
+Failing: No relevant argumentation or original ideas; no serious effort of engaging with topic and/or producing insightful, original, or meaningful comments; no connection to topic/film/culture."
