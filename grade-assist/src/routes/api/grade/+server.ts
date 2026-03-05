@@ -29,7 +29,7 @@ export async function POST({ request }: RequestEvent) {
 
         // 3. Construct Prompt
         const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
-        const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-preview' }); // Never change this model, this is the most stable modern model!
+        const model = genAI.getGenerativeModel({ model: 'gemini-3.1-pro-preview' }); // Never change this model, this is the most stable modern model!
 
         // Use the provided system prompt or valid default
         let promptInstruction = systemPrompt;
